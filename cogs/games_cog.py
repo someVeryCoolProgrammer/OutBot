@@ -44,8 +44,6 @@ class GamesCommands(app_commands.Group):
 
         self.bot_choice = random.randint(BOT_MIN_CHOICE_RPS, BOT_MAX_CHOICE_RPS)
 
-        print(self.bot_choice)
-
         await interaction.response.send_message(embed=embed_message, view=rps_buttons)
 
         await rps_buttons.wait()

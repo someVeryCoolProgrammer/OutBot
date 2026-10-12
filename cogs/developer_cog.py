@@ -5,6 +5,7 @@ from discord import app_commands
 from dotenv import load_dotenv
 
 from bot import OutBot
+from utils import make_embed
 
 load_dotenv("config/.env")
 developer_id_str: str | None = os.getenv("DEVELOPER_ID")
@@ -41,12 +42,14 @@ class DeveloperCommands(app_commands.Group):
         Cooldown:
             1 message per user every 30 seconds. This only applies the command they just used.
         """
-        embed_message: discord.Embed = discord.Embed(
-            title="OutBot's Contributors/Developers: ",
-            description="'someVeryCoolProgrammer' is the only developer/s and/or contributor/s for OutBot currently!",
-            colour=discord.Colour.red(),
+
+        await interaction.response.send_message(
+            embed=make_embed(
+                title="OutBot's Contributors/Developers: ",
+                description="'someVeryCoolProgrammer' is the only developer/s and/or contributor/s for OutBot currently!",
+                colour=discord.Colour.red(),
+            )
         )
-        await interaction.response.send_message(embed=embed_message)
 
     @app_commands.command(
         name="sync",
@@ -76,12 +79,13 @@ class DeveloperCommands(app_commands.Group):
 
         commands_synced = await self.bot.tree.sync()
 
-        embed_message: discord.Embed = discord.Embed(
-            title="Synced",
-            description=f"{len(commands_synced)} slash command groups have been synced.",
+        await interaction.followup.send(
+            embed=make_embed(
+                title="Synced!",
+                description=f"{len(commands_synced)} slash command groups have been synced.",
+                colour=discord.Colour.green(),
+            )
         )
-
-        await interaction.followup.send(embed=embed_message)
 
 
 def setup(bot: OutBot) -> DeveloperCommands:

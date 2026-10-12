@@ -7,9 +7,9 @@ async def response_check(
     """
     Util for checking if an interaction has been responded to
 
-       Args:
-                error_message (str): Error message the bot is going to send to the user
-            ephemeral (bool): If the message is ephemeral
+    Args:
+        error_message (str): Error message the bot is going to send to the user
+        ephemeral (bool): If the message is ephemeral
     """
     if interaction.response.is_done():
         await interaction.followup.send(

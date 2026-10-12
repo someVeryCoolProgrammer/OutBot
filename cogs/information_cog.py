@@ -9,6 +9,7 @@ from utils import (
     OUTBOT_LICENSE,
     PRIVACY_POLICY,
     TERMS_OF_SERVICE,
+    make_embed,
 )
 
 
@@ -39,14 +40,12 @@ class InformationCommands(app_commands.Group):
         """
         gateway_latency: int = round(self.bot.latency * 1000)
 
-        embed_message = discord.Embed(
-            title="Pong 🏓!",
-            description=f"OutBot's gateway latency: `{gateway_latency}`ms!",
-            colour=discord.Colour.green(),
-        )
-
         await interaction.response.send_message(
-            embed=embed_message,
+            embed=make_embed(
+                title="Pong 🏓!",
+                description=f"OutBot's gateway latency: `{gateway_latency}`ms!",
+                colour=discord.Colour.green(),
+            ),
             ephemeral=True,
         )
 
@@ -68,52 +67,53 @@ class InformationCommands(app_commands.Group):
         Cooldown:
             1 message per user every 30 seconds. This only applies the command they just used.
         """
-        embed_message: discord.Embed = discord.Embed(
-            title="📋 OutBot's Command List: \n",
-            description=(
-                "\n# 💻 Developer Commands: \n"
-                "- **`/developer devs`**\n"
-                "- **`/developer sync`**\n"
-                "#\n 🎉 Fun Commands: \n"
-                "- **`/fun freenitro`**\n"
-                "- **`/fun fakeban`**\n"
-                "#\n ⚙️ General Commands: \n"
-                "- **`/general hello`**\n"
-                "- **`/general dm`**\n"
-                "- **`/general ehco`**\n"
-                "- **`/general poll`**\n"
-                "#\n 🧠 Information Commands: \n"
-                "- **`/info ping`**\n"
-                "- **`/info help`**\n"
-                "- **`/info about`**\n"
-                "- **`/info roadmap`**\n"
-                "#\n 🔗 Link Commands: \n"
-                "- **`/link discord`**\n"
-                "- **`/link invite`**\n"
-                "- **`/link github`**\n"
-                "- **`/link contributing_policy`**\n"
-                "- **`/link contributing_policy`**\n"
-                "- **`/link contributing policy`**\n"
-                "- **`/link license`**\n"
-                "- **`/link privacy_policy`**\n"
-                "- **`/link tos`**\n"
-                "- **`/link security_policy`**\n"
-                "#\n 🛡️ Moderation Commands: \n"
-                "- **`/moderation ban`**\n"
-                "#\n 🔐 Privacy Commands: \n"
-                "- **`/privacy privacy_information`**\n"
-                "- **`/privacy data`**\n"
-                "#\n ⚖️ Rules Commands: \n"
-                "- **`/rules outmythrules`**\n"
-                "- **`/rules outbotrules`**\n"
-                "#\n 🙋‍♂️ Support Commands: \n"
-                "- **`/support report`**\n"
-                "- **`/support feedback`**\n"
-            ),
-            colour=discord.Colour.blurple(),
-        )
 
-        await interaction.response.send_message(embed=embed_message)
+        await interaction.response.send_message(
+            embed=make_embed(
+                title="📋 OutBot's Command List: \n",
+                description=(
+                    "\n# 💻 Developer Commands: \n"
+                    "- **`/developer devs`**\n"
+                    "- **`/developer sync`**\n"
+                    "#\n 🎉 Fun Commands: \n"
+                    "- **`/fun freenitro`**\n"
+                    "- **`/fun fakeban`**\n"
+                    "#\n ⚙️ General Commands: \n"
+                    "- **`/general hello`**\n"
+                    "- **`/general dm`**\n"
+                    "- **`/general ehco`**\n"
+                    "- **`/general poll`**\n"
+                    "#\n 🧠 Information Commands: \n"
+                    "- **`/info ping`**\n"
+                    "- **`/info help`**\n"
+                    "- **`/info about`**\n"
+                    "- **`/info roadmap`**\n"
+                    "#\n 🔗 Link Commands: \n"
+                    "- **`/link discord`**\n"
+                    "- **`/link invite`**\n"
+                    "- **`/link github`**\n"
+                    "- **`/link contributing_policy`**\n"
+                    "- **`/link contributing_policy`**\n"
+                    "- **`/link contributing policy`**\n"
+                    "- **`/link license`**\n"
+                    "- **`/link privacy_policy`**\n"
+                    "- **`/link tos`**\n"
+                    "- **`/link security_policy`**\n"
+                    "#\n 🛡️ Moderation Commands: \n"
+                    "- **`/moderation ban`**\n"
+                    "#\n 🔐 Privacy Commands: \n"
+                    "- **`/privacy privacy_information`**\n"
+                    "- **`/privacy data`**\n"
+                    "#\n ⚖️ Rules Commands: \n"
+                    "- **`/rules outmythrules`**\n"
+                    "- **`/rules outbotrules`**\n"
+                    "#\n 🙋‍♂️ Support Commands: \n"
+                    "- **`/support report`**\n"
+                    "- **`/support feedback`**\n"
+                ),
+                colour=discord.Colour.blurple(),
+            )
+        )
 
     @app_commands.command(
         name="about",

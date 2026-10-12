@@ -2,7 +2,7 @@ import discord
 from discord import app_commands
 
 from bot import OutBot
-from utils import GITHUB_LINK, PRIVACY_POLICY
+from utils import GITHUB_LINK, PRIVACY_POLICY, make_embed
 
 
 class PrivacyCommands(app_commands.Group):
@@ -26,18 +26,19 @@ class PrivacyCommands(app_commands.Group):
         Cooldown:
             1 message per user every 30 seconds. This only applies the command they just used.
         """
-        embed_message: discord.Embed = discord.Embed(
-            title="🔒 Information About OutBot's Privacy: \n",
-            description=(
-                "\nOutBot has **NO** logs even for errors.\n"
-                "OutBot does not use **ANY** gateway intents.\n"
-                f"OutBot is 100% open source: {GITHUB_LINK}\n"
-                f"More information at: {PRIVACY_POLICY}\n"
-            ),
-            colour=discord.Colour.dark_blue(),
-        )
 
-        await interaction.response.send_message(embed=embed_message)
+        await interaction.response.send_message(
+            embed=make_embed(
+                title="🔒 Information About OutBot's Privacy: \n",
+                description=(
+                    "\nOutBot has **NO** logs even for errors.\n"
+                    "OutBot does not use **ANY** gateway intents.\n"
+                    f"OutBot is 100% open source: {GITHUB_LINK}\n"
+                    f"More information at: {PRIVACY_POLICY}\n"
+                ),
+                colour=discord.Colour.dark_blue(),
+            )
+        )
 
     @app_commands.command(
         name="data",
@@ -54,17 +55,18 @@ class PrivacyCommands(app_commands.Group):
         Cooldown:
             1 message per user every 30 seconds. This only applies the command they just used.
         """
-        embed_message: discord.Embed = discord.Embed(
-            title="🗃️ What data does OutBot collect?\n",
-            description=(
-                "\nOutBot collects/logs no data about you. The only data OutBot may keep is user feedback to help improve OutBot.\n"
-                "User feedback is only kept for only the time it needs to be retained for."
-                f"For more information, please read: {PRIVACY_POLICY}"
-            ),
-            colour=discord.Colour.dark_green(),
-        )
 
-        await interaction.response.send_message(embed=embed_message)
+        await interaction.response.send_message(
+            embed=make_embed(
+                title="🗃️ What data does OutBot collect?\n",
+                description=(
+                    "\nOutBot collects/logs no data about you. The only data OutBot may keep is user feedback to help improve OutBot.\n"
+                    "User feedback is only kept for only the time it needs to be retained for."
+                    f"For more information, please read: {PRIVACY_POLICY}"
+                ),
+                colour=discord.Colour.dark_green(),
+            )
+        )
 
 
 def setup(bot: OutBot) -> PrivacyCommands:

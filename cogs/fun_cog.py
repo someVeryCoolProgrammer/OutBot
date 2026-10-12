@@ -13,7 +13,7 @@ class FunCommands(app_commands.Group):
 
     @app_commands.command(
         name="freenitro",
-        description="Trust me bro...",
+        description="Free Nitro...",
     )
     @app_commands.checks.cooldown(1, 30, key=lambda interaction: interaction.user.id)
     async def freenitro(

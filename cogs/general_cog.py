@@ -4,7 +4,7 @@ import discord
 from discord import app_commands
 
 from bot import OutBot
-from utils import EMOJIS, send_censor_word_warning
+from utils import EMOJIS, make_embed, send_censor_word_warning
 
 
 class GeneralCommands(app_commands.Group):
@@ -31,9 +31,7 @@ class GeneralCommands(app_commands.Group):
         Cooldown:
             1 message per user every 30 seconds. This only applies the command they just used.
         """
-        await interaction.response.send_message(
-            f"Hello, {interaction.user.mention}! How are you?"
-        )
+        await interaction.response.send_message("Hello!")
 
     @app_commands.command(
         name="dm",
@@ -63,7 +61,13 @@ class GeneralCommands(app_commands.Group):
             return
 
         try:
-            await interaction.user.send(f"||{message}||")
+            await interaction.user.send(
+                embed=make_embed(
+                    title="You have a special message by ||yourself||!",
+                    description=message,
+                    colour=discord.Colour.green(),
+                )
+            )
 
             await interaction.response.send_message(
                 "DM has been sent!",
@@ -72,7 +76,7 @@ class GeneralCommands(app_commands.Group):
 
         except discord.Forbidden:
             await interaction.response.send_message(
-                "I could not send you a DM. This may be because you have them turned off. Please try turning them on and try again. If the issue persists, please open a ticket or use /report.",
+                "I could not send you a DM. This may be because you have them turned off. Please try turning them on and try again.",
                 ephemeral=True,
             )
 
@@ -103,16 +107,12 @@ class GeneralCommands(app_commands.Group):
         if await send_censor_word_warning(interaction, message):
             return
 
-        embed_message: discord.Embed = discord.Embed(
-            title=f"{interaction.user} has said: ",
-            description=message,
-            colour=discord.Colour.green(),
-        )
-        embed_message.set_footer(
-            text="You may report the user if anything inappropriate was said."
-        )
         await interaction.response.send_message(
-            embed=embed_message,
+            embed=make_embed(
+                title=f"{interaction.user} has said: ",
+                description=message,
+                colour=discord.Colour.green(),
+            ),
         )
 
     @app_commands.command(
@@ -148,15 +148,12 @@ class GeneralCommands(app_commands.Group):
         ) or await send_censor_word_warning(interaction, question):
             return
 
-        embed_message: discord.Embed = discord.Embed(
-            title=title,
-            description=question,
-        )
-
         await interaction.response.defer()
 
         await interaction.followup.send(
-            embed=embed_message,
+            embed=make_embed(
+                title=title, description=question, colour=discord.Colour.green()
+            ),
         )
 
         poll_message = await interaction.original_response()

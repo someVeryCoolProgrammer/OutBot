@@ -11,6 +11,7 @@ from utils import (
     PRIVACY_POLICY,
     SECURITY_POLICY,
     TERMS_OF_SERVICE,
+    make_embed,
 )
 
 
@@ -91,19 +92,20 @@ class LinksCommands(app_commands.Group):
         Cooldown:
             1 message per user every 30 seconds. This only applies the command they just used.
         """
-        embed_message = discord.Embed(
-            title="OutBot's Policy Links: \n",
-            description=(
-                f"- {PRIVACY_POLICY}\n"
-                f"- {TERMS_OF_SERVICE}\n"
-                f"- {SECURITY_POLICY}\n"
-                f"- {CONTRIBUTING_POLICY}\n"
-                f"- {CODE_OF_CONDUCT}\n"
-            ),
-            colour=discord.Colour.dark_grey(),
-        )
 
-        await interaction.response.send_message(embed=embed_message)
+        await interaction.response.send_message(
+            embed=make_embed(
+                title="OutBot's Policy Links: \n",
+                description=(
+                    f"- {PRIVACY_POLICY}\n"
+                    f"- {TERMS_OF_SERVICE}\n"
+                    f"- {SECURITY_POLICY}\n"
+                    f"- {CONTRIBUTING_POLICY}\n"
+                    f"- {CODE_OF_CONDUCT}\n"
+                ),
+                colour=discord.Colour.dark_grey(),
+            )
+        )
 
 
 def setup(bot: OutBot) -> LinksCommands:

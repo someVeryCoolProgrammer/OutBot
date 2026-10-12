@@ -1,3 +1,9 @@
+# 12th October 2026
+
+## Update 0.5.14
+
+- **Removed print when /games rps is used. (I forgot to remove it)**
+
 # OutBot Bug Fix - 2nd October 2026
 
 ## Update 0.5.13

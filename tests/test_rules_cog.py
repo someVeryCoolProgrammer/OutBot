@@ -2,6 +2,7 @@
 
 from unittest.mock import AsyncMock, Mock
 
+import discord
 import pytest
 
 from cogs import RulesCommands
@@ -19,8 +20,11 @@ async def test_rules_commands_outmyth_rules() -> None:
 
     await rules_commands.outmyth_rules.callback(rules_commands, interaction)
 
-    interaction.response.send_message.assert_awaited_once_with(
-        "# 📜 OutMyth's Rules :\n\n"
+    call = interaction.response.send_message.call_args
+    embed_message = call.kwargs["embed"]
+
+    assert embed_message.title == "📜 OutMyth's Rules: "
+    assert embed_message.description == (
         "# 1) ❌ NO NSFW And NO Malicious Content\n"
         "- Absolutely **NO** NSFW content, pornography, sexual content, or malicious links.\n\n"
         "# 2) 🤬 NO Swearing / Offensive Language\n"
@@ -40,6 +44,7 @@ async def test_rules_commands_outmyth_rules() -> None:
         "- Be kind, respectful, and helpful to everyone.\n"
         "- Avoid disruptive behaviour. This includes malicious, manipulative, rage-baiting, or otherwise disruptive behaviour."
     )
+    assert embed_message.colour == discord.Colour.teal()
 
 
 @pytest.mark.asyncio
@@ -53,9 +58,13 @@ async def test_rules_commands_outbot_rules() -> None:
 
     await rules_commands.outbot_rules.callback(rules_commands, interaction)
 
-    interaction.response.send_message.assert_awaited_once_with(
-        "## OutBot Rules\n\n"
+    call = interaction.response.send_message.call_args
+    embed_message = call.kwargs["embed"]
+
+    assert embed_message.title == "📜OutBot Rules: "
+    assert embed_message.description == (
         "By using OutBot you agree to comply with Discord's Terms Of Service and Community Guidelines.\n"
         f"More information is available at: {TERMS_OF_SERVICE}.\n"
         "Breaking these rules will result in a punishment. The severity of the punishment depends on how nature and seriousness of the violation.\n"
     )
+    assert embed_message.colour == discord.Colour.teal()

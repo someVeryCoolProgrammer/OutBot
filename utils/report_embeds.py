@@ -2,6 +2,8 @@ import discord
 
 
 class ReportEmbedMessages:
+    """Embeds for the /support report command"""
+
     @staticmethod
     def report_embed_message_page_1(user: discord.Member) -> discord.Embed:
         """

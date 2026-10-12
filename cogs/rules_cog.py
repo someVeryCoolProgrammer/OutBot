@@ -2,7 +2,7 @@ import discord
 from discord import app_commands
 
 from bot import OutBot
-from utils import TERMS_OF_SERVICE
+from utils import TERMS_OF_SERVICE, make_embed
 
 
 class RulesCommands(app_commands.Group):
@@ -29,28 +29,34 @@ class RulesCommands(app_commands.Group):
         Cooldown:
             1 message per user every 30 seconds. This only applies the command they just used.
         """
+        # DO NOT EDIT!
         # These can be found in the channel "rules", in OutMyth's Discord server.
 
         await interaction.response.send_message(
-            "# 📜 OutMyth's Rules :\n\n"
-            "# 1) ❌ NO NSFW And NO Malicious Content\n"
-            "- Absolutely **NO** NSFW content, pornography, sexual content, or malicious links.\n\n"
-            "# 2) 🤬 NO Swearing / Offensive Language\n"
-            "- Use common sense when chatting.\n"
-            "- Do **NOT** use censored words or other offensive language.\n\n"
-            "# 3) 🔐 Respect Privacy\n"
-            "- Do **NOT** dox or share anyone’s personal information.\n"
-            "- Do **NOT** DM anyone without a valid reason.\n\n"
-            "# 4) 🗣📢 No Self Promotion\n"
-            "- **NO** advertising in DMs or channels.\n"
-            "- This applies to EVERYONE, including staff and owners.\n\n"
-            "# 5) @️ Use Mentions Responsibly And Lessange Spam\n\n"
-            "- **DON’T** ping @everyone, @here, or use any other type of mass pinging or message spam.\n\n"
-            "# 6) 🎟️ Tickets\n"
-            "- Do NOT open tickets without a valid reason.\n\n"
-            "# 7) 🫂 Behaviour\n"
-            "- Be kind, respectful, and helpful to everyone.\n"
-            "- Avoid disruptive behaviour. This includes malicious, manipulative, rage-baiting, or otherwise disruptive behaviour."
+            embed=make_embed(
+                title="📜 OutMyth's Rules: ",
+                description=(
+                    "# 1) ❌ NO NSFW And NO Malicious Content\n"
+                    "- Absolutely **NO** NSFW content, pornography, sexual content, or malicious links.\n\n"
+                    "# 2) 🤬 NO Swearing / Offensive Language\n"
+                    "- Use common sense when chatting.\n"
+                    "- Do **NOT** use censored words or other offensive language.\n\n"
+                    "# 3) 🔐 Respect Privacy\n"
+                    "- Do **NOT** dox or share anyone’s personal information.\n"
+                    "- Do **NOT** DM anyone without a valid reason.\n\n"
+                    "# 4) 🗣📢 No Self Promotion\n"
+                    "- **NO** advertising in DMs or channels.\n"
+                    "- This applies to EVERYONE, including staff and owners.\n\n"
+                    "# 5) @️ Use Mentions Responsibly And Lessange Spam\n\n"
+                    "- **DON’T** ping @everyone, @here, or use any other type of mass pinging or message spam.\n\n"
+                    "# 6) 🎟️ Tickets\n"
+                    "- Do NOT open tickets without a valid reason.\n\n"
+                    "# 7) 🫂 Behaviour\n"
+                    "- Be kind, respectful, and helpful to everyone.\n"
+                    "- Avoid disruptive behaviour. This includes malicious, manipulative, rage-baiting, or otherwise disruptive behaviour."
+                ),
+                colour=discord.Colour.teal(),
+            )
         )
 
     @discord.app_commands.command(
@@ -72,10 +78,15 @@ class RulesCommands(app_commands.Group):
             1 message per user every 30 seconds. This only applies the command they just used.
         """
         await interaction.response.send_message(
-            "## OutBot Rules\n\n"
-            "By using OutBot you agree to comply with Discord's Terms Of Service and Community Guidelines.\n"
-            f"More information is available at: {TERMS_OF_SERVICE}.\n"
-            "Breaking these rules will result in a punishment. The severity of the punishment depends on how nature and seriousness of the violation.\n"
+            embed=make_embed(
+                title="📜OutBot Rules: ",
+                description=(
+                    "By using OutBot you agree to comply with Discord's Terms Of Service and Community Guidelines.\n"
+                    f"More information is available at: {TERMS_OF_SERVICE}.\n"
+                    "Breaking these rules will result in a punishment. The severity of the punishment depends on how nature and seriousness of the violation.\n"
+                ),
+                colour=discord.Colour.teal(),
+            )
         )
 
 

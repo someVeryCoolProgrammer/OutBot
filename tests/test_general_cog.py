@@ -17,6 +17,4 @@ async def test_general_commands_greet() -> None:
 
     await general_commands.greet.callback(general_commands, interaction)
 
-    interaction.response.send_message.assert_awaited_once_with(
-        f"Hello, {interaction.user.mention}! How are you?"
-    )
+    interaction.response.send_message.assert_awaited_once_with("Hello!")

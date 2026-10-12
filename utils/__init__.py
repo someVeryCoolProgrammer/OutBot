@@ -14,6 +14,7 @@ from .constants import (
     SECURITY_POLICY,
     TERMS_OF_SERVICE,
 )
+from .embed_builder import make_embed
 from .error_handling_reponse_check import response_check
 from .profanity import send_censor_word_warning
 from .report_embeds import ReportEmbedMessages
@@ -39,6 +40,7 @@ __all__: list[str] = [
     "ReportDropdown",
     "ReportEmbedMessages",
     "RpsButtons",
+    "make_embed",
     "response_check",
     "send_censor_word_warning",
 ]
