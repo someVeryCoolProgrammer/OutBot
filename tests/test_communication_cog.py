@@ -4,7 +4,7 @@ from unittest.mock import AsyncMock, Mock
 
 import pytest
 
-from cogs import GeneralCommands
+from cogs import CommunicationCommands
 
 
 @pytest.mark.asyncio
@@ -13,8 +13,8 @@ async def test_general_commands_greet() -> None:
     interaction = Mock()
     interaction.response.send_message = AsyncMock()
 
-    general_commands = GeneralCommands()
+    communication_commands = CommunicationCommands()
 
-    await general_commands.greet.callback(general_commands, interaction)
+    await communication_commands.greet.callback(communication_commands, interaction)
 
     interaction.response.send_message.assert_awaited_once_with("Hello!")

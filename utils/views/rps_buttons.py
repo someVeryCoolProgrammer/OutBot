@@ -1,3 +1,5 @@
+from typing import Final
+
 import discord
 
 
@@ -7,6 +9,9 @@ class RpsButtons(discord.ui.View):
     def __init__(self) -> None:
         super().__init__(timeout=600)
         self.user_choice: int = 0
+        self.ROCK: Final[int] = 1
+        self.SCISSORS: Final[int] = 2
+        self.PAPER: Final[int] = 3
 
     @discord.ui.button(
         label="Rock",
@@ -29,7 +34,7 @@ class RpsButtons(discord.ui.View):
             10 minute (600 seconds)
         """
         await interaction.response.defer()
-        self.user_choice: int = 1
+        self.user_choice: int = self.ROCK
         self.stop()
 
     @discord.ui.button(label="Scissors", style=discord.ButtonStyle.success, emoji="✂️")
@@ -49,7 +54,7 @@ class RpsButtons(discord.ui.View):
             10 minute (600 seconds)
         """
         await interaction.response.defer()
-        self.user_choice: int = 2
+        self.user_choice: int = self.PAPER
         self.stop()
 
     @discord.ui.button(label="paper", style=discord.ButtonStyle.danger, emoji="📃")
@@ -69,5 +74,5 @@ class RpsButtons(discord.ui.View):
             10 minute (600 seconds)
         """
         await interaction.response.defer()
-        self.user_choice: int = 3
+        self.user_choice: int = self.SCISSORS
         self.stop()

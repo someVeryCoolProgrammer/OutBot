@@ -4,7 +4,7 @@ import discord
 from discord import app_commands
 
 from bot import OutBot
-from utils import BOT_MAX_CHOICE_RPS, BOT_MIN_CHOICE_RPS, RpsButtons
+from utils import BOT_MAX_CHOICE_RPS, BOT_MIN_CHOICE_RPS, RpsButtons, make_embed
 
 
 class GamesCommands(app_commands.Group):
@@ -17,7 +17,7 @@ class GamesCommands(app_commands.Group):
     @app_commands.command(
         name="rps", description="Play rock, paper, scissors against OutBot!"
     )
-    @app_commands.checks.cooldown(1, 30, key=lambda interaction: interaction.user.id)
+    @app_commands.checks.cooldown(1, 1, key=lambda interaction: interaction.user.id)
     async def rps(self, interaction: discord.Interaction) -> None:
         """
         Allos users to play rock, paper, scissors against OutBot
@@ -35,7 +35,7 @@ class GamesCommands(app_commands.Group):
             colour=discord.Colour.green(),
         )
         embed_message.add_field(
-            name="Mathch",
+            name="Opponent: ",
             value="You will be playing against OutBot - Best Of 3",
             inline=True,
         )
@@ -49,25 +49,41 @@ class GamesCommands(app_commands.Group):
         await rps_buttons.wait()
 
         if rps_buttons.user_choice == self.bot_choice:
-            await interaction.followup.send("TIE!", ephemeral=True)
-
-        # I KNOW using magic numbers are bad pracice. At the time of implmenting them, I was too tired to make them constants. I will change them later.
-        # 1 = rock
-        # 2 = paper
-        # 3 = scissors
+            await interaction.followup.send(
+                embed=make_embed(
+                    title="||TIED||!",
+                    description="gg!",
+                    colour=discord.Colour.blue(),
+                ),
+                ephemeral=True,
+            )
 
         elif (
-            rps_buttons.user_choice == 1
+            rps_buttons.user_choice == rps_buttons.ROCK
             and self.bot_choice == 2
-            or rps_buttons.user_choice == 2
+            or rps_buttons.user_choice == rps_buttons.SCISSORS
             and self.bot_choice == 3
-            or rps_buttons.user_choice == 3
+            or rps_buttons.user_choice == rps_buttons.PAPER
             and self.bot_choice == 1
         ):
-            await interaction.followup.send("YOU WIN! :)", ephemeral=True)
+            await interaction.followup.send(
+                embed=make_embed(
+                    title="You ||WON||!",
+                    description="gg!",
+                    colour=discord.Colour.green(),
+                ),
+                ephemeral=True,
+            )
 
         else:
-            await interaction.followup.send("YOU LOOSE! :(", ephemeral=True)
+            await interaction.followup.send(
+                embed=make_embed(
+                    title="You ||LOST||!",
+                    description="gg!",
+                    colour=discord.Colour.red(),
+                ),
+                ephemeral=True,
+            )
 
 
 def setup(bot: OutBot) -> GamesCommands:

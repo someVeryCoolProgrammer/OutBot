@@ -1,17 +1,15 @@
-import asyncio
-
 import discord
 from discord import app_commands
 
 from bot import OutBot
-from utils import EMOJIS, make_embed, send_censor_word_warning
+from utils import make_embed, send_censor_word_warning
 
 
-class GeneralCommands(app_commands.Group):
-    """Commands that do not fit any other category."""
+class CommunicationCommands(app_commands.Group):
+    """Commands that 'talk' to the user"""
 
     def __init__(self):
-        super().__init__(name="general")
+        super().__init__(name="communication")
 
     @app_commands.command(
         name="greet",
@@ -45,7 +43,7 @@ class GeneralCommands(app_commands.Group):
         message: app_commands.Range[str, 1, 1000],
     ) -> None:
         """
-        DM the user who invoked the command.
+        DM the user
 
         Args:
             interaction (discord.Interaction): The Discord command being invoked.
@@ -115,51 +113,6 @@ class GeneralCommands(app_commands.Group):
             ),
         )
 
-    @app_commands.command(
-        name="poll",
-        description="Create a poll.",
-    )
-    @app_commands.describe(
-        title="What is your poll's title?",
-        question="What is the question you would like to ask?",
-    )
-    async def poll(
-        self,
-        interaction: discord.Interaction,
-        title: app_commands.Range[str, 5, 100],
-        question: app_commands.Range[str, 10, 150],
-    ) -> None:
-        """
-        Creates an embed with a title and a question that users can add reactions to.
 
-        Args:
-            interaction (discord.Interaction): The Discord command being invoked.
-            title (str): The title the user wants their embed to have. Maximum length: 100 characters.
-            question (str): The question of their poll (description). Maximum length: 150 characters.
-
-        Allowed Mentions:
-            None
-
-        Cooldown:
-            1 message per user every 30 seconds. This only applies the command they just used.
-        """
-        if await send_censor_word_warning(
-            interaction, title
-        ) or await send_censor_word_warning(interaction, question):
-            return
-
-        await interaction.response.defer()
-
-        await interaction.followup.send(
-            embed=make_embed(
-                title=title, description=question, colour=discord.Colour.green()
-            ),
-        )
-
-        poll_message = await interaction.original_response()
-
-        asyncio.gather(*(poll_message.add_reaction(emoji) for emoji in EMOJIS))
-
-
-def setup(bot: OutBot) -> GeneralCommands:
-    return GeneralCommands()
+def setup(bot: OutBot) -> CommunicationCommands:
+    return CommunicationCommands()
