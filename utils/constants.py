@@ -32,5 +32,3 @@ TERMS_OF_SERVICE: Final[str] = (
     "[OutBot's Terms of Serive](<https://github.com/someVeryCoolProgrammer/OutBot/blob/main/documentation/TERMS_OF_SERVICE.md>)"
 )
 EMOJIS: Final[tuple[str, ...]] = ("👍", "👎", "✅", "❌")
-BOT_MIN_CHOICE_RPS: Final[int] = 1
-BOT_MAX_CHOICE_RPS: Final[int] = 3

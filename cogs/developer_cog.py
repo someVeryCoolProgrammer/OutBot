@@ -69,7 +69,12 @@ class DeveloperCommands(app_commands.Group):
 
         if interaction.user.id != developer_id_int:
             await interaction.response.send_message(
-                "Hmmm, you do not look like a developer...", ephemeral=True
+                embed=make_embed(
+                    title="You cannot use this command!",
+                    description="Hmmm, you do not look like a developer...",
+                    colour=discord.Colour.red(),
+                ),
+                ephemeral=True,
             )
             return
 

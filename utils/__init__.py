@@ -1,6 +1,4 @@
 from .constants import (
-    BOT_MAX_CHOICE_RPS,
-    BOT_MIN_CHOICE_RPS,
     BOT_VERSION,
     CODE_OF_CONDUCT,
     CONTRIBUTING_POLICY,
@@ -21,8 +19,6 @@ from .report_embeds import ReportEmbedMessages
 from .views import FreeNitroButton, ReportButtons, ReportDropdown, RpsButtons
 
 __all__: list[str] = [
-    "BOT_MAX_CHOICE_RPS",
-    "BOT_MIN_CHOICE_RPS",
     "BOT_VERSION",
     "CODE_OF_CONDUCT",
     "CONTRIBUTING_POLICY",

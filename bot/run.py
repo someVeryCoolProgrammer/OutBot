@@ -1,3 +1,5 @@
+import time
+
 import discord
 
 from bot import load_env_bot_token
@@ -11,3 +13,8 @@ def run_bot() -> None:
         outbot.run(load_env_bot_token(), reconnect=True)
     except discord.LoginFailure:
         raise RuntimeError('Discord bot token in "config/.env" is invalid.')
+    finally:
+        print("Shutting down OutBot...")
+        time.sleep(2)
+        print("OutBot has shutdown successfully.")
+        print("GoodBye :)")

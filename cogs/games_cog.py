@@ -4,7 +4,7 @@ import discord
 from discord import app_commands
 
 from bot import OutBot
-from utils import BOT_MAX_CHOICE_RPS, BOT_MIN_CHOICE_RPS, RpsButtons, make_embed
+from utils import RpsButtons, make_embed
 
 
 class GamesCommands(app_commands.Group):
@@ -12,7 +12,7 @@ class GamesCommands(app_commands.Group):
 
     def __init__(self) -> None:
         super().__init__(name="games")
-        self.bot_choice: int = 0
+        self.bot_choices: list[str] = ["rock", "paper", "scissors"]
 
     @app_commands.command(
         name="rps", description="Play rock, paper, scissors against OutBot!"
@@ -36,19 +36,19 @@ class GamesCommands(app_commands.Group):
         )
         embed_message.add_field(
             name="Opponent: ",
-            value="You will be playing against OutBot - Best Of 3",
+            value="You will be playing against OutBot",
             inline=True,
         )
 
         rps_buttons: RpsButtons = RpsButtons()
 
-        self.bot_choice = random.randint(BOT_MIN_CHOICE_RPS, BOT_MAX_CHOICE_RPS)
+        bot_choice = random.choice(self.bot_choices)
 
         await interaction.response.send_message(embed=embed_message, view=rps_buttons)
 
         await rps_buttons.wait()
 
-        if rps_buttons.user_choice == self.bot_choice:
+        if rps_buttons.user_choice == bot_choice:
             await interaction.followup.send(
                 embed=make_embed(
                     title="||TIED||!",
@@ -60,11 +60,11 @@ class GamesCommands(app_commands.Group):
 
         elif (
             rps_buttons.user_choice == rps_buttons.ROCK
-            and self.bot_choice == 2
+            and bot_choice == "scissors"
             or rps_buttons.user_choice == rps_buttons.SCISSORS
-            and self.bot_choice == 3
+            and bot_choice == "paper"
             or rps_buttons.user_choice == rps_buttons.PAPER
-            and self.bot_choice == 1
+            and bot_choice == "rock"
         ):
             await interaction.followup.send(
                 embed=make_embed(
