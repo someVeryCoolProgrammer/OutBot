@@ -15,6 +15,8 @@ def load_env_bot_token() -> str:
     discord_token: str | None = os.getenv("DISCORD_TOKEN")
 
     if discord_token is None:
-        raise RuntimeError("The Discord bot token was not found in config/.env.")
+        raise RuntimeError(
+            'Discord bot token in "config/.env" is invalid. Please set your DISCORD_TOKEN to your discord bot token. It can be found: https://discord.com/developers/home'
+        )
 
     return discord_token

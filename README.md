@@ -47,17 +47,17 @@ Discord always has something going on. A member gets banned, a member goes offli
 
 A privileged intent is an intent that is more sensitive or potentially less private than regular intents. There are three privileged intents which are covered below. These need to be enabled in the Discord Developer Portal and requested by your bot in code. Non-privileged intents can be enabled by:  
 ```py
-intents = discord.Intents.default()  # Enables all default non-privileged intents
+intents = discord.Intents.default()  # Enables all default non-privileged intents.
 ```
 
 You can disable specific gateway intents by:  
 ```py
-intents.guilds = False  # Disables guild intents.
+intents.guilds = False  # Disables guild intent.
 ```
 
 To disable all non-privileged gateway intents 
 ```py
-intents = discord.Intents.none()  # Disables all default non-privileged gateway intents
+intents = discord.Intents.none()  # Disables all default non-privileged gateway intents.
 ```
 
 | Name | Privileged | What Does It Do? | Enabled |
@@ -108,7 +108,11 @@ Open source is when a project's source code is available. Users can modify, dist
 
 # OutBot's Config
 
-OutBot does **NOT** use prefix  commands. OutBot uses **NO** gateway intents. Therefore, intents=discord.Intents.none()
+OutBot does **NOT** use prefix  commands. OutBot uses **NO** gateway intents. Therefore, 
+
+```py
+intents = discord.Intents.none()  # Disables all default non-privileged gateway intents.
+```
 
 ---
 
@@ -222,12 +226,12 @@ There is one final thing we need to do and that is to change the developer id. B
 
 ### Run OutBot On Windows
 ```shell
-py -m bot.main
+python -m bot
 ```
 
 ### Run OutBot On Linux/macOS
 ```shell
-py -m bot.main
+python3 -m bot
 ```
 
 # IMPORTANT NOTICE

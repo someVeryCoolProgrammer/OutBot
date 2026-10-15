@@ -20,7 +20,7 @@ class GamesCommands(app_commands.Group):
     @app_commands.checks.cooldown(1, 1, key=lambda interaction: interaction.user.id)
     async def rps(self, interaction: discord.Interaction) -> None:
         """
-        Allos users to play rock, paper, scissors against OutBot
+        Allows users to play rock, paper, scissors against OutBot
 
         Args:
             interaction (discord.Interaction): The Discord command being invoked.
