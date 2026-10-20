@@ -165,7 +165,7 @@ git clone https://github.com/someVeryCoolProgrammer/OutBot.git
 ```
 
 ```shell
-cd OutBot
+cd outbot
 ```
 
 ## Creating A Virtual Environment
