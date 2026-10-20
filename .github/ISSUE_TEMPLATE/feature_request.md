@@ -1,11 +1,20 @@
-## Feature
+---
+name: Feature request
+about: Request a feature
+title: "[FEATURE]"
+labels: ''
+assignees: ''
 
-What feature would you like to see added to OutBot?
+---
 
-## Why Would This Be Useful?
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-Explain what problem this feature would solve or how it would improve OutBot.
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-## Additional Information
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
 
-Add anything else that does not fit into any other subcatagory?
+**Additional context**
+Add any other context or screenshots about the feature request here.

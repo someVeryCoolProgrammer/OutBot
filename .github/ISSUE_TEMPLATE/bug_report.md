@@ -1,9 +1,30 @@
-## Description
+---
+name: Bug report
+about: Report a bug
+title: "[BUG]"
+labels: ''
+assignees: ''
 
-## Steps to Reproduce
+---
 
-## Expected Behavior
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-## Actual Behavior
+**To Reproduce**
+Steps to reproduce the behavior:
+1. 
+2. 
+3. 
 
-## Additional Information
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - OutBot Version [e.g. 22]
+
+**Additional context**
+Add any other context about the problem here.
