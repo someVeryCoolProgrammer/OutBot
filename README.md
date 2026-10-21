@@ -1,3 +1,9 @@
+<div align="center">
+    <h1>OutBot</h1>
+    <h3>Privacy. Secure. Reliable.</h3>
+    <br>
+</div>
+
 # Table Of Contents
 
 - [About](#about)
