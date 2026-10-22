@@ -17,6 +17,6 @@ def run_bot() -> None:
         )
     finally:
         print("Shutting down OutBot...")
-        time.sleep(2)
+        time.sleep(1)
         print("OutBot has shutdown successfully.")
         print("GoodBye :)")

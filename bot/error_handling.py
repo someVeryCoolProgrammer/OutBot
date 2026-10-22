@@ -40,7 +40,7 @@ async def on_app_command_error(
     elif isinstance(error, app_commands.CommandNotFound):
         await response_check(
             interaction,
-            "That command does not exist anymore.",
+            "This command does not exist anymore or got renamed.",
             ephemeral=True,
         )
 
@@ -58,3 +58,7 @@ async def on_app_command_error(
             f"# Something went wrong :(\nPlease open a ticket or a GitHub issue ({GITHUB_LINK})",
             ephemeral=True,
         )
+        print(error)
+
+
+# Errors are printed to make debugging easier.
