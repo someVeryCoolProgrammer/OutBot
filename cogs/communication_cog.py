@@ -62,19 +62,26 @@ class CommunicationCommands(app_commands.Group):
             await interaction.user.send(
                 embed=make_embed(
                     title="You have a special message by ||yourself||!",
-                    description=message,
+                    description=f"||{message}||",
                     colour=discord.Colour.green(),
                 )
-            )
-
-            await interaction.response.send_message(
-                "DM has been sent!",
-                ephemeral=True,
             )
 
         except discord.Forbidden:
             await interaction.response.send_message(
                 "I could not send you a DM. This may be because you have them turned off. Please try turning them on and try again.",
+                ephemeral=True,
+            )
+
+        else:
+            await interaction.response.send_message(
+                "DM has been sent!",
+                ephemeral=True,
+            )
+
+        finally:
+            await interaction.followup.send(
+                "Attempted to send DM.",
                 ephemeral=True,
             )
 

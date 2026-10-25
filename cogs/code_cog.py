@@ -26,7 +26,7 @@ class CodeCog(app_commands.Group):
                 description=(
                     "`# You can use single or double quotes``print('Hello, World!')`"
                 ),
-                colour=discord.Colour.green()
+                colour=discord.Colour.green(),
             )
         )
 

@@ -21,7 +21,7 @@ OutBot is self hosted. OutBot will never be hosted elsewhere. Self hosting allow
 
 # User Data Collection
 
-OutBot does not collect any user data. OutBot cannot log user data because it has no logs. OutBot uses no gateway intents. OutBot stores all feedback in a .md file. Feedback is deleted as soon as it is dealt with. OUTBOT DOES NOT STORE REPORTS. Unexpected errors are printed to the console to help developers solve them.
+OutBot does not collect any user data. OutBot uses no gateway intents. OutBot stores all feedback in a .txt file. Feedback is deleted as soon as it is dealt with. OUTBOT DOES NOT STORE REPORTS. The **ONLY** thing that is logged are errors to make debugging easier. Developers have to delete them manualy. In the future, logs will automatically delete themselves every 12 hours.
 
 ---
 

@@ -1,7 +1,12 @@
+import logging
+
 import discord
 from discord import app_commands
 
 from utils import GITHUB_LINK, response_check
+
+
+logger = logging.getLogger(__name__)
 
 
 async def on_app_command_error(
@@ -48,17 +53,18 @@ async def on_app_command_error(
         await response_check(
             interaction,
             f"Something went wrong while executing this command. Please open a ticket or a GitHub issue ({GITHUB_LINK})",
-            ephemeral=True,
+            exec_info=True,
         )
-        print(error)
+        logger.error("Something went wrong while executing this command.")
 
     else:
         await response_check(
             interaction,
-            f"# Something went wrong :(\nPlease open a ticket or a GitHub issue ({GITHUB_LINK})",
+            f"Something went wrong :(\nPlease open a ticket or a GitHub issue ({GITHUB_LINK})",
+            exec_info=True,
             ephemeral=True,
         )
-        print(error)
+        logger.error("Unexpected error", exec_info=True)
 
 
-# Errors are printed to make debugging easier.
+# Some errors are logged to make debugging easier.

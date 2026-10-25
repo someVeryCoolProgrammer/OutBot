@@ -31,10 +31,11 @@ class PrivacyCommands(app_commands.Group):
             embed=make_embed(
                 title="🔒 Information About OutBot's Privacy: \n",
                 description=(
-                    "\nOutBot has **NO** logs even for errors.\n"
+                    "\nOutBot has **NO** logs.\n"
                     "OutBot does not use **ANY** gateway intents.\n"
                     f"OutBot is 100% open source: {GITHUB_LINK}\n"
                     f"More information at: {PRIVACY_POLICY}\n"
+                    "OutBot **ONLY** uses logs for debugging.\n"
                 ),
                 colour=discord.Colour.dark_blue(),
             )
@@ -61,8 +62,9 @@ class PrivacyCommands(app_commands.Group):
                 title="🗃️ What data does OutBot collect?\n",
                 description=(
                     "\nOutBot collects/logs no data about you. The only data OutBot may keep is user feedback to help improve OutBot.\n"
-                    "User feedback is only kept for only the time it needs to be retained for."
-                    f"For more information, please read: {PRIVACY_POLICY}"
+                    "User feedback is only kept for only the time it needs to be retained for.\n"
+                    f"For more information, please read: {PRIVACY_POLICY}\n"
+                    "OutBot does keeps logs and doesn't delete them. Logs are deleted manually."
                 ),
                 colour=discord.Colour.dark_green(),
             )
