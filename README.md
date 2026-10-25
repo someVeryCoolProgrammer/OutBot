@@ -24,7 +24,9 @@
 
 OutBot is an open source, privacy respecting Discord utility bot built using **discord.py**. **OutBot is 100% open source**. Most popular Discord bots are **NOT** open source. Open source is covered in more detail in docs/OPEN_SOURCE.md and [here](https://opensource.org/osd).
 
-OutBot uses **NO** privileged intents. OutBot does **NOT** use **ANY GATEWAY INTENTS**. Intents will be covered in more detail in docs/INTENTS.md 
+OutBot uses **NO** privileged intents. OutBot does **NOT** use **ANY GATEWAY INTENTS**. Intents will be covered in more detail in docs/INTENTS.md
+
+OutBot has built in features such as swear word filter. 
 
 [![OutBot's Version](https://img.shields.io/github/v/release/someVeryCoolProgrammer/OutBot)](https://github.com/someVeryCoolProgrammer/OutBot/releases/latest)
 
@@ -70,7 +72,7 @@ source .venv/bin/activate
 
 # Installing Dependencies:
 
-Insalling Dependencies On Linux/macOS
+Installing Dependencies On Linux/macOS
 ```shell
 pip install -r requirements/core.txt
 ```
@@ -128,8 +130,12 @@ Create a new file called config/.env and make sure it is in .gitignore. Create a
 
 To add OutBot to your apps and/or servers change the placeholder in the links (YOUR_BOT_ID) to your bot's id.
 
+```text
 OutBot's Invite Link Guild (Server): https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&scope=bot%20applications.commands
+```
+```text
 OutBot's Invite Link (User): https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&scope=applications.commands
+```
 
 Get your bot's discord id the same way you got your own discord id.
 
@@ -151,5 +157,4 @@ python3 -m bot
 
 # Developer notes
 
-To report any issues (other than security vulnerabilities) please open a GitHub issue, a ticket on OutMyth, or use /report.  
-Before reporting a security issue please read [OutBot's Security Policy](https://github.com/abdfjakshduwiyernm123/OutBot?tab=security-ov-file). Thank **you** for using OutBot! ❤️
+If you fork this repo, I would greatly appreciate it being clear that your project is a fork of OutBot. Thank **you** for using OutBot!

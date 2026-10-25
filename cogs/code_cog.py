@@ -19,6 +19,7 @@ class CodeCog(app_commands.Group):
     )
     async def hello_world(self, interaction: discord.Interaction) -> None:
         await interaction.response.defer()
+        # Bot sleeps for 5 seconds to make it look like it is thinking.
         await asyncio.sleep(5)
         await interaction.response.send_message(
             make_embed(

@@ -1,5 +1,7 @@
 from typing import Final
 
+CENSOR_WORDS_TEST: Final[str] = ""
+
 CENSOR_WORDS: Final[tuple[str, ...]] = (
     "fy",
     "fuking",

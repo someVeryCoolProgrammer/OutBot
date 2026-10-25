@@ -1,9 +1,18 @@
+# Environment
 **/.env
 .venv/
 venv/
+
+# Cache
 .pytest_cache
 **/__pycache__/
-*.pyc
 .ruff_cache/
+
+# Python Byte Code 
+*.pyc
+
+# User Feedback
 FEEDBACK.txt
+
+# Logs
 **.log

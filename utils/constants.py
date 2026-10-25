@@ -10,7 +10,7 @@ CONTRIBUTING_POLICY: Final[str] = (
     "[OutBot's Contributing Policy](<https://github.com/someVeryCoolProgrammer/OutBot?tab=contributing-ov-file>)"
 )
 DISCORD_SERVER_INVITE_LINK: Final[str] = (
-    "[OutMyth's Discord Server](<https://discord.gg/Sc5vAvTJtc>)"
+    "[OutBot's Discord Server](<https://discord.gg/>zg44xwwgm3)"
 )
 GITHUB_LINK: Final[str] = (
     "[OutBot's GitHub Link](<https://github.com/someVeryCoolProgrammer/OutBot/>)"
