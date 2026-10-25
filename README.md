@@ -13,9 +13,8 @@
 - [Installing Dependencies](#installing-dependencies)
 - [Getting A Local Copy Of OutBot](#getting-a-local-copy-of-outbot)
 - [Discord Developer Portal Setup](#discord-developer-portal-setup)
-- [Creating .env](#creating-env)
+- [Developer ID And Env](#developer-id-and-env)
 - [Adding Your Bot To Your Apps/Servers](#adding-your-bot-to-your-appsservers)
-- [Changing Developer Id](#changing-developer-id)
 - [Run OutBot](#run-outbot)
 - [Developer notes](#developer-notes)
 
@@ -52,7 +51,7 @@ Windows:
 python -m venv .venv
 ```
 
-Activating it Windows:
+Activating It On Windows:
 ```shell
 .venv\Scripts\Activate.ps1
 ```
@@ -62,7 +61,7 @@ Linux/macOS:
 python3 -m venv .venv
 ```
 
-Activating it Linux/macOS:
+Activating It On Linux/macOS:
 ```shell
 source .venv/bin/activate
 ```
