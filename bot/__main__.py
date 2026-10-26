@@ -1,4 +1,4 @@
-from config.outbot_custom import custom_setup
+from config.status import custom_setup
 
 from .load_env import load_env_bot_token
 from .run import run_bot

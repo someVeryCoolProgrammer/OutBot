@@ -3,7 +3,7 @@ import time
 import discord
 
 from bot import load_env_bot_token
-from config.outbot_custom import custom_setup
+from config.status import custom_setup
 
 
 def run_bot() -> None:

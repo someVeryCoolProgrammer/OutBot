@@ -13,7 +13,7 @@ from .constants import (
     TERMS_OF_SERVICE,
 )
 from .embed_builder import make_embed
-from .error_handling_reponse_check import response_check
+from .response_check import response_check
 from .profanity import send_censor_word_warning
 from .report_embeds import ReportEmbedMessages
 from .views import FreeNitroButton, ReportButtons, ReportDropdown, RpsButtons
