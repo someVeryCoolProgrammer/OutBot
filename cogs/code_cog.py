@@ -1,4 +1,6 @@
 import asyncio
+import random
+from typing import Final
 
 import discord
 from discord import app_commands
@@ -19,13 +21,18 @@ class CodeCog(app_commands.Group):
     )
     async def hello_world(self, interaction: discord.Interaction) -> None:
         await interaction.response.defer()
-        # Bot sleeps for 5 seconds to make it look like it is thinking.
-        await asyncio.sleep(5)
-        await interaction.response.send_message(
-            make_embed(
+        # Bot sleeps to make it look like it is thinking.
+        
+        MAX_SLEEP_TIME: Final[float] = 5.0
+        MIN_SLEEP_TIME: Final[float] = 2.5    
+        sleep = random.uniform(MAX_SLEEP_TIME, MIN_SLEEP_TIME)
+
+        await asyncio.sleep(sleep)
+        await interaction.followup.send(
+            embed=make_embed(
                 title="Hello World In The Python Programming Language",
                 description=(
-                    "`# You can use single or double quotes``print('Hello, World!')`"
+                    "# You can use single or double quotes\n`print('Hello, World!')`"
                 ),
                 colour=discord.Colour.green(),
             )

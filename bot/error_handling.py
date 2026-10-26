@@ -52,6 +52,7 @@ async def on_app_command_error(
         await response_check(
             interaction,
             f"Something went wrong while executing this command. Please open a ticket or a GitHub issue ({GITHUB_LINK})",
+            ephemeral=True,    
         )
         print(error)
 
