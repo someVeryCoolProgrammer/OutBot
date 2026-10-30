@@ -10,11 +10,10 @@
 If you discover a vulnerability, please report it privately.
 
 You may report it through:
-- /support report
 - [GitHub's private vulnerability reporting](https://github.com/someVeryCoolProgrammer/OutBot/security/advisories/new)
 
 You may **NOT** report it through:
-- Any other method that is not /support report or GitHub's private vulnerability reporting  
+- Any method that is not GitHub's private vulnerability reporting  
   
 Please include:
 

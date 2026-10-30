@@ -33,4 +33,4 @@ OutBot is 100% free and open source. Open source allows users to see the source 
 
 # Developer Notes 
 
-OutBot was made to be a discord bot that is privacy respecting. It has definitely goten a lot better at that through the updates. If you have any privacy concerns, please open a GitHub issue, /support report. You may **NOT** use **ANY** another way to report a privacy concern.
+OutBot was made to be a discord bot that is privacy respecting. It has definitely goten a lot better at that through the updates. If you have any privacy concerns, please open a GitHub issue. You may **NOT** use **ANY** another way to report a privacy concern.

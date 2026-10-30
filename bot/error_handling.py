@@ -5,8 +5,6 @@ from discord import app_commands
 
 from utils import GITHUB_LINK, response_check
 
-logger = logging.getLogger(__name__)
-
 
 async def on_app_command_error(
     interaction: discord.Interaction, error: app_commands.AppCommandError
@@ -52,7 +50,7 @@ async def on_app_command_error(
         await response_check(
             interaction,
             f"Something went wrong while executing this command. Please open a ticket or a GitHub issue ({GITHUB_LINK})",
-            ephemeral=True,    
+            ephemeral=True,
         )
         print(error)
 

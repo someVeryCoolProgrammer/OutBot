@@ -32,9 +32,6 @@ class InformationCommands(app_commands.Group):
         Args:
             interaction (discord.Interaction): The Discord command being invoked.
 
-        Allowed Mentions:
-            None
-
         Cooldown:
             1 message per user every 30 seconds. This only applies the command they just used.
         """
@@ -75,10 +72,6 @@ class InformationCommands(app_commands.Group):
                     "\n# 💻 Developer Commands: \n"
                     "- **`/developer devs`**\n"
                     "- **`/developer sync`**\n"
-                    "#\n 🎉 Fun Commands: \n"
-                    "- **`/fun freenitro`**\n"
-                    "- **`/fun fakeban`**\n"
-                    "- **`/fun poll`**\n"
                     "#\n 🗣️ Communication Commands: \n"
                     "- **`/talk hello`**\n"
                     "- **`/talk dm`**\n"
@@ -99,11 +92,7 @@ class InformationCommands(app_commands.Group):
                     "- **`/privacy privacy_information`**\n"
                     "- **`/privacy data`**\n"
                     "#\n ⚖️ Rules Commands: \n"
-                    "- **`/rules outmythrules`**\n"
                     "- **`/rules outbotrules`**\n"
-                    "#\n 🙋‍♂️ Support Commands: \n"
-                    "- **`/support report`**\n"
-                    "- **`/support feedback`**\n"
                 ),
                 colour=discord.Colour.blurple(),
             )

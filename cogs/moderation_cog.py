@@ -14,8 +14,8 @@ class ModerationCommands(app_commands.Group):
 
     @app_commands.command(name="ban", description="Moderation ban a member")
     @app_commands.guild_only()
-    @discord.app_commands.describe(
-        user="The member you would like to ban. You cannot ban a member with a higher role than you.",
+    @app_commands.describe(
+        user="The member you would like to ban.",
         reason="Why would you like to ban them?",
     )
     @app_commands.checks.has_permissions(ban_members=True)
@@ -30,8 +30,9 @@ class ModerationCommands(app_commands.Group):
         """
         Moderation ban a user
 
-        user (str): The discord user you want to ban
-        reason (str): The reason you want to ban the user
+        Args:
+            user (discord.Member): The discord user you want to ban
+            reason (str): The reason you want to ban the user
 
         Cooldown:
             1 message per user every 30 seconds or 1 message per user every day. This only applies the command they just used.
@@ -64,6 +65,60 @@ class ModerationCommands(app_commands.Group):
         await guild.ban(user, reason=reason)
         await interaction.followup.send(
             f"User: {user} was banned by {interaction.user} because of {reason}."
+        )
+
+    @app_commands.command(name="kick", description="Moderation kick a member")
+    @app_commands.guild_only()
+    @app_commands.describe(
+        user="Who you would like to kick", reason="Why would you like to kick them?"
+    )
+    @app_commands.checks.has_permissions(kick_members=True)
+    @app_commands.checks.bot_has_permissions(kick_members=True)
+    @app_commands.checks.cooldown(1, 30, key=lambda interaction: interaction.user.id)
+    async def kick(
+        self,
+        interaction: discord.Interaction,
+        user: discord.Member,
+        reason: app_commands.Range[str, 15, 500],
+    ) -> None:
+        """
+        Moderation kick a user
+
+        Args:
+            user (discord.Member): The member you want to kick from a server
+            reason (str): The reason you would like to the the member
+
+        Cooldown:
+            1 message per user every 30 seconds or 1 message per user every day. This only applies the command they just used.
+        """
+        await interaction.response.defer(ephemeral=True)
+
+        if await send_censor_word_warning(interaction, reason):
+            return
+
+        guild: discord.Guild | None = interaction.guild
+
+        if guild is None:
+            await interaction.followup.send(
+                "This command cannot be used in DMs.",
+                ephemeral=True,
+            )
+            return
+
+        if user == interaction.user:
+            await interaction.followup.send("You cannot kick yourself.", ephemeral=True)
+            return
+
+        if user.id == guild.owner_id:
+            await interaction.followup.send(
+                "You cannot kick the server owner.",
+                ephemeral=True,
+            )
+            return
+
+        await guild.kick(user, reason=reason)
+        await interaction.followup.send(
+            f"User: {user} was kicked by {interaction.user} because of {reason}."
         )
 
 

@@ -19,12 +19,13 @@ class CodeCog(app_commands.Group):
         name="hello_world",
         description="'Hello World' in the python programming language.",
     )
+    @app_commands.checks.cooldown(1, 30, key=lambda interaction: interaction.user.id)
     async def hello_world(self, interaction: discord.Interaction) -> None:
         await interaction.response.defer()
         # Bot sleeps to make it look like it is thinking.
-        
+
         MAX_SLEEP_TIME: Final[float] = 5.0
-        MIN_SLEEP_TIME: Final[float] = 2.5    
+        MIN_SLEEP_TIME: Final[float] = 2.5
         sleep = random.uniform(MAX_SLEEP_TIME, MIN_SLEEP_TIME)
 
         await asyncio.sleep(sleep)

@@ -1,3 +1,9 @@
+# 30th October 2026
+
+## Update 0.5.16
+
+- Fixed /code hello_world not having cooldown
+
 # 26th October 2026
 
 ## Update 0.5.15
