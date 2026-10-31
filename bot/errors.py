@@ -1,10 +1,10 @@
-
 import discord
 from discord import app_commands
 
 from utils import GITHUB_LINK, response_check
 
 
+# Some errors are printed to make debugging easier.
 async def on_app_command_error(
     interaction: discord.Interaction, error: app_commands.AppCommandError
 ) -> None:
@@ -13,7 +13,7 @@ async def on_app_command_error(
 
     Args:
         interaction (discord.Interaction): The discord command that triggered the error
-        error (app_commands.AppCommandError): Checks errors.
+        error (app_commands.AppCommandError): The error that occured
     """
 
     if isinstance(error, app_commands.CommandOnCooldown):
@@ -26,7 +26,7 @@ async def on_app_command_error(
     elif isinstance(error, app_commands.MissingPermissions):
         await response_check(
             interaction,
-            "You do not have the permissions to use that command.",
+            "You do not have the permissions to use this command.",
             ephemeral=True,
         )
 
@@ -48,7 +48,7 @@ async def on_app_command_error(
     elif isinstance(error, app_commands.CommandInvokeError):
         await response_check(
             interaction,
-            f"Something went wrong while executing this command. Please open a ticket or a GitHub issue ({GITHUB_LINK})",
+            f"Something went wrong while executing this command. Please create a GitHub issue ({GITHUB_LINK})",
             ephemeral=True,
         )
         print(error)
@@ -56,10 +56,7 @@ async def on_app_command_error(
     else:
         await response_check(
             interaction,
-            f"Something went wrong :(\nPlease open a ticket or a GitHub issue ({GITHUB_LINK})",
+            f"Something went wrong :(\nPlease create a GitHub issue ({GITHUB_LINK})",
             ephemeral=True,
         )
         print(error)
-
-
-# Some errors are logged to make debugging easier.

@@ -64,7 +64,8 @@ class ModerationCommands(app_commands.Group):
 
         await guild.ban(user, reason=reason)
         await interaction.followup.send(
-            f"User: {user} was banned by {interaction.user} because of {reason}."
+            f"User: {user} was banned by {interaction.user} because of {reason}.",
+            ephemeral=True,
         )
 
     @app_commands.command(name="kick", description="Moderation kick a member")
@@ -118,8 +119,59 @@ class ModerationCommands(app_commands.Group):
 
         await guild.kick(user, reason=reason)
         await interaction.followup.send(
-            f"User: {user} was kicked by {interaction.user} because of {reason}."
+            f"User: {user} was kicked by {interaction.user} because of {reason}.",
+            ephemeral=True,
         )
+
+    @app_commands.command(name="unban", description="Moderation unban a member")
+    @app_commands.guild_only()
+    @app_commands.describe(
+        user="The member you would like to unban.",
+        reason="Why would you like to unban them?",
+    )
+    @app_commands.checks.has_permissions(ban_members=True)
+    @app_commands.checks.bot_has_permissions(ban_members=True)
+    @app_commands.checks.cooldown(1, 30, key=lambda interaction: interaction.user.id)
+    async def unban(
+        self,
+        interaction: discord.Interaction,
+        user: discord.Member,
+        reason: app_commands.Range[str, 15, 500],
+    ) -> None:
+        """
+        Moderation unban a user
+
+        Args:
+            user (discord.Member): The discord user you want to ban
+            reason (str): The reason you want to ban the user
+
+        Cooldown:
+            1 message per user every 30 seconds or 1 message per user every day. This only applies the command they just used.
+        """
+
+        try:
+            await interaction.response.defer(ephemeral=True)
+
+            if await send_censor_word_warning(interaction, reason):
+                return
+
+            guild: discord.Guild | None = interaction.guild
+
+            if guild is None:
+                await interaction.followup.send(
+                    "This command cannot be used in DMs.",
+                    ephemeral=True,
+                )
+                return
+
+            await guild.ban(user, reason=reason)
+            await interaction.followup.send(
+                f"User: {user} was unbanned by {interaction.user} because of {reason}.",
+                ephemeral=True,
+            )
+        except discord.NotFound:
+            await interaction.followup.send("User not found :(", ephemeral=True)
+            return
 
 
 def setup(bot: OutBot) -> ModerationCommands:

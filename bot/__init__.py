@@ -1,4 +1,4 @@
-from .error_handling import on_app_command_error
+from .errors import on_app_command_error
 from .load_env import load_env_bot_token
 from .outbot import OutBot
 from .run import run_bot

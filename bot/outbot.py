@@ -4,7 +4,7 @@ from pathlib import Path
 import discord
 from discord import app_commands
 
-from .error_handling import on_app_command_error
+from .errors import on_app_command_error
 
 
 class OutBot(discord.Client):

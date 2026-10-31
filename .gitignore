@@ -10,9 +10,3 @@ venv/
 
 # Python Byte Code 
 *.pyc
-
-# User Feedback
-FEEDBACK.txt
-
-# Logs
-**.log

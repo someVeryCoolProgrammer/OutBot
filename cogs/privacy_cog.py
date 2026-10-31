@@ -31,10 +31,8 @@ class PrivacyCommands(app_commands.Group):
             embed=make_embed(
                 title="🗃️ What data does OutBot collect?\n",
                 description=(
-                    "\nOutBot collects/logs no data about you. The only data OutBot may keep is user feedback to help improve OutBot.\n"
-                    "User feedback is only kept for only the amount of time it needs to be retained for.\n"
-                    "OutBot does keep logs and doesn't delete them. Logs are deleted manually. Logs are only used for debugging purposes. "
-                    "Logs do **NOT** contain information about users.\n"
+                    "\nOutBot collects/logs **NOTHING**.\n"
+                    "OutBot does **NOT** keep logs. All errors are printed to console.\n"
                     f"For more information, please read: {PRIVACY_POLICY}\n"
                 ),
                 colour=discord.Colour.dark_green(),

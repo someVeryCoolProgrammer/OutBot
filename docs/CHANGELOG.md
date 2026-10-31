@@ -1,5 +1,11 @@
 # 31st October 2026
 
+## Update 0.5.18
+
+- Fixed bug: Added ephemeral=True for mod commands confirmation message
+
+# 31st October 2026
+
 ## Update 0.5.17
 
 - Fixed bug: docstring said the test for /communication greet tested /links discord
