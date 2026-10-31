@@ -9,7 +9,7 @@ class ModerationCommands(app_commands.Group):
     """OutBot's moderation commands"""
 
     def __init__(self, bot) -> None:
-        super().__init__(name="moderation")
+        super().__init__(name="mod")
         self.bot: OutBot = bot
 
     @app_commands.command(name="ban", description="Moderation ban a member")

@@ -1,3 +1,9 @@
+# 31st October 2026
+
+## Update 0.5.17
+
+- Fixed bug: docstring said the test for /communication greet tested /links discord
+
 # 30th October 2026
 
 ## Update 0.5.16
@@ -10,7 +16,7 @@
 
 Fixed bugs:
 - code hello_world not working
-- Re-added ephemeral for command invoke error (I accidently removed it)
+- Re-added ephemeral for command invoke error (I accidentally removed it)
 - embed=make_embed() for /code hello_world
 
 # 12th October 2026

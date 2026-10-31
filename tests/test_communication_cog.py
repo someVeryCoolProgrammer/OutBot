@@ -8,8 +8,8 @@ from cogs import CommunicationCommands
 
 
 @pytest.mark.asyncio
-async def test_general_commands_greet() -> None:
-    """Tests /link discord"""
+async def test_communication_commands_greet() -> None:
+    """Tests /communication hello"""
     interaction = Mock()
     interaction.response.send_message = AsyncMock()
 

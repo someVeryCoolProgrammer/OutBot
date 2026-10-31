@@ -69,13 +69,15 @@ class InformationCommands(app_commands.Group):
             embed=make_embed(
                 title="📋 OutBot's Command List: \n",
                 description=(
+                    "\n# </> Code Commands: \n"
+                    "- **`/code hello_world`**\n"
                     "\n# 💻 Developer Commands: \n"
                     "- **`/developer devs`**\n"
                     "- **`/developer sync`**\n"
                     "#\n 🗣️ Communication Commands: \n"
-                    "- **`/talk hello`**\n"
-                    "- **`/talk dm`**\n"
-                    "- **`/talk ehco`**\n"
+                    "- **`/communication hello`**\n"
+                    "- **`/communication dm`**\n"
+                    "- **`/communication echo`**\n"
                     "#\n 🧠 Information Commands: \n"
                     "- **`/info ping`**\n"
                     "- **`/info help`**\n"
@@ -86,13 +88,13 @@ class InformationCommands(app_commands.Group):
                     "- **`/link invite`**\n"
                     "- **`/link github`**\n"
                     "- **`/link policy`**\n"
-                    "#\n 🛡️ Moderation Commands: \n"
-                    "- **`/moderation ban`**\n"
+                    "#\n 🛡️ Mod Commands: \n"
+                    "- **`/mod ban`**\n"
+                    "- **`/mod kick`**\n"
                     "#\n 🔐 Privacy Commands: \n"
-                    "- **`/privacy privacy_information`**\n"
                     "- **`/privacy data`**\n"
                     "#\n ⚖️ Rules Commands: \n"
-                    "- **`/rules outbotrules`**\n"
+                    "- **`/rules outbot`**\n"
                 ),
                 colour=discord.Colour.blurple(),
             )
