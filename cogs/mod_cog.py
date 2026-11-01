@@ -135,7 +135,7 @@ class ModerationCommands(app_commands.Group):
     async def unban(
         self,
         interaction: discord.Interaction,
-        user: discord.Member,
+        user: discord.User,
         reason: app_commands.Range[str, 15, 500],
     ) -> None:
         """

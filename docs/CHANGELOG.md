@@ -1,3 +1,9 @@
+# 1/11/'26
+
+## 0.5.19
+
+- Fixed /mod unabn not working. The "user" param was type-hinted as "discord.Member". This caused the bot to raise an error because the banned user was not a member of the guild it was used it. The correct type hint would be "discord.User",
+
 # 31st October 2026
 
 ## Update 0.5.18
