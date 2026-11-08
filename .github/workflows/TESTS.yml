@@ -1,36 +1,38 @@
+
 name: Test OutBot
 
 on:
-    push
-    pull_requests
+    push:
+    pull_request:
 
 jobs:
     test:
         runs-on: ubuntu-latest
 
-steps:
-    - name: Checkout repository
-        uses: actions/checkout@v6
+        steps:
+            - name: Checkout repository
+                uses: actions/checkout@v6
 
-    - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-            python-version: "3.15"
+            - name: Set up Python
+                uses: actions/setup-python@v6
+                with:
+                    python-version: "3.15"
 
-    - name: Install dependencies
-        run: |
-            python -m pip install --upgrade pip
-            pip3 install -r requirements/core.txt 
-            pip3 install -r requirements/developer.txt 
-            pip3 install -r requirements/test.txt 
+            - name: Install dependencies
+                run: |
+                    python -m pip install --upgrade pip
+                    pip install -r requirements/core.txt
+                    pip install -r requirements/developer.txt
+                    pip install -r requirements/test.txt
 
-    - name: Run Ruff
-        run: |
-            ruff check .
-            ruff format --check .
+            - name: Run Ruff
+                run: |
+                    ruff check .
+                    ruff format --check .
 
-    - name: Run tests
-        run: python -m pytest
-    
-    - name: Run Pyright 
-        run: pyright .
+            - name: Run tests
+                run: python -m pytest
+
+            - name: Run Pyright
+                run: pyright .
+

@@ -1,6 +1,6 @@
 from typing import Final
 
-BOT_VERSION: Final[str] = "0.5.19"
+BOT_VERSION: Final[str] = "1.0.0"
 DATE_CREATED: Final[str] = "July 11th 2026"
 
 CODE_OF_CONDUCT: Final[str] = (

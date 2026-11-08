@@ -1,5 +1,9 @@
 # 8/11/'26
 
+- Fixed syntax errors in yml file
+
+# 8/11/'26
+
 ## 1.0.0
 
 After 3months and 27days, OutBot is finally done! OutBot will know receive less frequent updates. OutBot will still receive them, just not as frequent as it was. OutBot was come a very long way since its first update on the 12th of July.
