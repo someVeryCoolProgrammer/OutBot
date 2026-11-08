@@ -152,13 +152,11 @@ class InformationCommands(app_commands.Group):
             title="OutBot's Planned Features: ",
             description=(
                 "# User: \n"
-                "- ||🛠️|| More interactive and fun commands for users\n"
-                "- ||🛠️|| Add better way to report.\n"
+                "- ||❌️|| Making downloading OutBot easier.\n"
                 "- ||❌️|| Host Outbot's privacy policy and terms of service on a website.\n"
                 "\n# Code quality: \n"
-                "- ||🛠️|| More tests and clearer docs.\n"
-                "- ||❌️|| Add ymal files to .github.\n"
-                "- ||✅|| More robust code.\n"
+                "- ||🛠️|| Less repeated code.\n"
+                "- ||❌️|| More automation"
             ),
             colour=discord.Colour.green(),
         )

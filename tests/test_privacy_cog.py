@@ -26,7 +26,7 @@ async def test_privacy_commands_data() -> None:
     assert embed_message.title == "🗃️ What data does OutBot collect?\n"
     assert embed_message.description == (
         "\nOutBot collects/logs **NOTHING**.\n"
-        "OutBot does **NOT** keep logs. All errors are printed to console.\n" 
+        "OutBot does **NOT** keep logs. All errors are printed to console.\n"
         f"For more information, please read: {PRIVACY_POLICY}\n"
     )
     assert embed_message.colour == discord.Colour.dark_green()

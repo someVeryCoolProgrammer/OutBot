@@ -1,3 +1,69 @@
+# 8/11/'26
+
+## 1.0.0
+
+After 3months and 27days, OutBot is finally done! OutBot will know receive less frequent updates. OutBot will still receive them, just not as frequent as it was. OutBot was come a very long way since its first update on the 12th of July.
+
+### Added:
+
+- Updated all docstrings so they are more descriptive
+- Improved /roadmap
+- Added clickable links to all documentation
+- Updated /ping to give OutBot's gateway latency instead of pinging the user
+- New commands: (/links github and /code hello_world, /mod ban, /mod kick, /mod unban)
+- Added more accurate type hints
+- Created command groups
+- Added a better warning to .env.example
+- Set OutBot's status to idle
+- Added custom activity to OutBot
+- Created a guild and user invite link for OutBot
+- Grouped security policy, privacy policy, contributing policy, and terms into one command called /links policy
+- Created FUNDING.yml
+- Wrote tests for all commands
+- Added workflows
+
+### Renamed:
+
+- utility command ---> general
+- /privacy ---> privacy_information
+- /developers devs ---> /developer credit
+- outmythrules ---> outbot
+- /privacy privacy_information ---> /privacy guide
+- response_check_error_handling ---> error_handling_response_check
+- cencor_words.py ---> profanity.py
+- outbot_custom_setup.py ---> outbot_custom.py
+- run_outbot.py ---> run.py
+- bot_info.py ---> constants.py
+- general command group ---> talk command group
+- main.py ---> dunder main.py
+- error_handling.py ---> errors.py
+- moderation command group ---> mod command group
+- /rules outbotrules ---> /rules outbot
+- /privacy privacy_information ---> /privacy info
+- Architecture:
+- Moved /ping from general cog to information cog
+- Moved main.py into the "bot" directory
+- Removed all gateway intents
+- Shifted from commands.Bot to discord.Client
+- Cogs are loaded with pathlib
+
+### Code:
+
+- Removed button when /info ping is used
+- Made directory, file, function, and variable names shorter
+- Improved error messages
+- De-bloated README.md
+- Moved some bits of README.md into separate files under the docs directory
+- Fixed all typos
+
+### Removed:
+
+- Removed dytest from test.txt
+- Removed all OutMyth branding
+- Deleted command /privacy guide because it was the same as /privacy data
+- Removed fun_cog, support_cog, and games_cog
+- Removed command /outmythrules
+
 # 1/11/'26
 
 ## 0.5.19

@@ -13,7 +13,7 @@ async def on_app_command_error(
 
     Args:
         interaction (discord.Interaction): The discord command that triggered the error
-        error (app_commands.AppCommandError): The error that occured
+        error (app_commands.AppCommandError): The error that occurred
     """
 
     if isinstance(error, app_commands.CommandOnCooldown):

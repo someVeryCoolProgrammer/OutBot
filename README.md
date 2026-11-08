@@ -22,11 +22,11 @@
 
 # About
 
-OutBot is an open source, privacy respecting Discord utility bot built using **discord.py**. **OutBot is 100% open source**. Most popular Discord bots are **NOT** open source. Open source is covered in more detail in docs/OPEN_SOURCE.md and [here](https://opensource.org/osd).
+OutBot is an open source, privacy respecting Discord utility bot built using **discord.py**. Most popular Discord bots are **NOT**. Open source is covered in more detail in docs/OPEN_SOURCE.md and [here](https://opensource.org/osd).
 
-OutBot uses **NO** privileged intents. OutBot does **NOT** use **ANY GATEWAY INTENTS**. Intents will be covered in more detail in docs/INTENTS.md
+OutBot uses **NO** privileged intents nor does OutBot use **ANY GATEWAY INTENTS**. Intents will be covered in more detail in docs/INTENTS.md
 
-OutBot has built in features such as swear word filter. 
+OutBot has built in features such as swear word filters. 
 
 [![OutBot's Version](https://img.shields.io/github/v/release/someVeryCoolProgrammer/OutBot)](https://github.com/someVeryCoolProgrammer/OutBot/releases/latest)
 
@@ -42,7 +42,8 @@ OutBot has built in features such as swear word filter.
 
 - [Python's Latest Version](https://www.python.org/downloads/)
 - discord.py (Newest version) You can check discord.py latest version [here](https://pypi.org/project/discord.py/)
-- [git](https://git-scm.com/install/) 
+- [git](https://git-scm.com/install/)
+- Text editor of your choice (eg: vscode, vscodium, nvim, etc)
 
 ---
 
@@ -120,9 +121,9 @@ Head over to [Discord Developer portal](https://discord.com/developers/applicati
 
 # Developer Id And Env
 
-There is one final thing we need to do and that is to change the developer id. By default it is set to OutBot's developers. By keeping it that way, you will **NOT** be able to sync OutBot's command tree. Go to Discord's settings and enable developer mode. Right click on your profile and click "copy user id". Copy that user id into config/.env (the same file with your disocrd token).  
-
 Create a new file called config/.env and make sure it is in .gitignore. Create a variable called DISCORD_TOKEN. To get your discord bot's token. Head over to [Discord Developer Portal](https://discord.com/developers/home), click "Bot" and then click "Reset Token". Click "Yes do it to" confirm. Copy your Discord token into the file ".env". DO NOT SHARE YOUR DISCORD BOT TOKEN WITH ANYONE. IF YOU DO, YOU GIVE THEM ACCESS TO YOUR BOT.
+
+First, create another variable called: "DEVELOPER_ID". Then, go to Discord's settings and enable developer mode. Right click on your profile and click "copy user id". Copy that user id into config/.env.
 
 ---
 
@@ -137,7 +138,7 @@ OutBot's Invite Link Guild (Server): https://discord.com/oauth2/authorize?client
 OutBot's Invite Link (User): https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&scope=applications.commands
 ```
 
-Get your bot's discord id the same way you got your own discord id.
+(You get your bot's discord id the same way you got your own discord id.)
 
 ---
 
@@ -157,4 +158,4 @@ python3 -m bot
 
 # Developer notes
 
-If you fork this repo, I would greatly appreciate it being clear that your project is a fork of OutBot. Thank **you** for using OutBot!
+If you fork this repo, I would greatly appreciate it if you make it clear that your project is a fork of OutBot. Thank **you** for using OutBot!

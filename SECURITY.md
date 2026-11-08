@@ -26,4 +26,4 @@ Please include:
 
 # Developer Notes
 
-Versions 0.5 and beyond are support for patches.
+Versions >= 0.5.0 are supported for patches.

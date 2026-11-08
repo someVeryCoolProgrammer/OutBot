@@ -45,4 +45,4 @@
 
 # Developer Notes
 
-If unsure if something follows OutBot's coding standards, you may ask in your pull request. Try to follow OutBot's coding standards to the best of your ability. Thank **you** for contributing to OutBot.
+If unsure whether if something follows OutBot's coding standards, you may ask in a pull request. Try to follow OutBot's coding standards to the best of your ability, you are not expected to perfectly follow OutBot's coding standards. Thank **you** for contributing to OutBot.

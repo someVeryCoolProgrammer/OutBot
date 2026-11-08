@@ -131,13 +131,11 @@ async def test_information_commands_roadmap() -> None:
     assert embed_message.title == "OutBot's Planned Features: "
     assert embed_message.description == (
         "# User: \n"
-        "- ||🛠️|| More interactive and fun commands for users\n"
-        "- ||🛠️|| Add better way to report.\n"
+        "- ||❌️|| Making downloading OutBot easier.\n"
         "- ||❌️|| Host Outbot's privacy policy and terms of service on a website.\n"
         "\n# Code quality: \n"
-        "- ||🛠️|| More tests and clearer docs.\n"
-        "- ||❌️|| Add ymal files to .github.\n"
-        "- ||✅|| More robust code.\n"
+        "- ||🛠️|| Less repeated code.\n"
+        "- ||❌️|| More automation"
     )
     assert embed_message.colour == discord.Colour.green()
     assert len(embed_message.fields) == 1
