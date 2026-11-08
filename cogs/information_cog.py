@@ -14,7 +14,7 @@ from utils import (
 
 
 class InformationCommands(app_commands.Group):
-    """Information about OutBot/OutMyth."""
+    """Information about OutBot."""
 
     def __init__(self, bot: OutBot) -> None:
         super().__init__(name="info")
@@ -71,13 +71,12 @@ class InformationCommands(app_commands.Group):
                 description=(
                     "\n# </> Code Commands: \n"
                     "- **`/code hello_world`**\n"
-                    "\n# 💻 Developer Commands: \n"
-                    "- **`/developer devs`**\n"
-                    "- **`/developer sync`**\n"
                     "#\n 🗣️ Communication Commands: \n"
                     "- **`/communication hello`**\n"
                     "- **`/communication dm`**\n"
-                    "- **`/communication echo`**\n"
+                    "\n# 💻 Developer Commands: \n"
+                    "- **`/developer Credit`**\n"
+                    "- **`/developer sync`**\n"
                     "#\n 🧠 Information Commands: \n"
                     "- **`/info ping`**\n"
                     "- **`/info help`**\n"
@@ -89,6 +88,7 @@ class InformationCommands(app_commands.Group):
                     "- **`/link github`**\n"
                     "- **`/link policy`**\n"
                     "#\n 🛡️ Mod Commands: \n"
+                    "- **`/mod ban`**\n"
                     "- **`/mod ban`**\n"
                     "- **`/mod kick`**\n"
                     "#\n 🔐 Privacy Commands: \n"
