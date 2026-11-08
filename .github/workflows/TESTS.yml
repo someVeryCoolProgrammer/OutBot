@@ -30,6 +30,9 @@ jobs:
                   ruff format --check .
 
             - name: Run tests
+              env:
+                  DEVELOPER_ID: ${{ secrets.DEVELOPER_ID }}
+                  DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
               run: python -m pytest
 
             - name: Run Pyright
