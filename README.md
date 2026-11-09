@@ -43,6 +43,7 @@ OutBot has built in features such as swear word filters.
 - [Python's Latest Version](https://www.python.org/downloads/)
 - discord.py (Newest version) You can check discord.py latest version [here](https://pypi.org/project/discord.py/)
 - [git](https://git-scm.com/install/)
+- [make (Only if you're on windows)](https://gnuwin32.sourceforge.net/packages/make.htm)
 - Text editor of your choice (eg: vscode, vscodium, nvim, etc)
 
 ---
@@ -51,52 +52,36 @@ OutBot has built in features such as swear word filters.
 
 Windows:
 ```shell
-python -m venv .venv
+makeAW
 ```
 
 Activating It On Windows:
 ```shell
-.venv\Scripts\Activate.ps1
+makeW
 ```
 
 Linux/macOS:
 ```shell
-python3 -m venv .venv
+makeAU
 ```
 
 Activating It On Linux/macOS:
 ```shell
-source .venv/bin/activate
+makeU
 ```
 
 ---
 
 # Installing Dependencies:
 
-Installing Dependencies On Linux/macOS
+Installing Dependencies On Windows
 ```shell
-pip install -r requirements/core.txt
-```
-
-```shell
-pip install -r requirements/developer.txt
-```
-
-```shell
-pip install -r requirements/tests.txt
+installW
 ```
 
 Installing Dependencies On Linux/macOS:
 ```shell
-pip3 install -r requirements/core.txt
-```
-
-```shell
-pip3 install -r requirements/developer.txt
-```
-
-```shell
-pip3 install -r requirements/tests.txt
+installU
 ```
 
 ---

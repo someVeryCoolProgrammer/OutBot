@@ -89,7 +89,7 @@ class InformationCommands(app_commands.Group):
                     "- **`/link policy`**\n"
                     "#\n 🛡️ Mod Commands: \n"
                     "- **`/mod ban`**\n"
-                    "- **`/mod ban`**\n"
+                    "- **`/mod unban`**\n"
                     "- **`/mod kick`**\n"
                     "#\n 🔐 Privacy Commands: \n"
                     "- **`/privacy data`**\n"
