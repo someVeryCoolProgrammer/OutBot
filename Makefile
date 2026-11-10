@@ -4,8 +4,8 @@ requirementsWC = pip install -r requirements/core.txt
 # Stands for: Requirements Windows Developer 
 requirementsWD = pip install -r requirements/developer.txt
 
-# Stands for: Requirements Windows Tests 
-requirementsWT = pip install -r requirements/tests.txt
+# Stands for: Requirements Windows Test 
+requirementsWT = pip install -r requirements/test.txt
 
 # Stands for: Requirements Unix Core
 requirementsUC = pip3 install -r requirements/core.txt
@@ -13,8 +13,8 @@ requirementsUC = pip3 install -r requirements/core.txt
 # Stands for: Install Unix Developer 
 requirementsUD = pip3 install -r requirements/developer.txt
 
-# Stands for: Install Unix Tests
-requirementsUT = pip3 install -r requirements/tests.txt
+# Stands for: Install Unix Test
+requirementsUT = pip3 install -r requirements/test.txt
 
 # Stands for: Python Interpreter Windows
 PIW = python
@@ -42,7 +42,7 @@ installU:
     # Stands for: Install Unix Developer
 	$(requirementsUD)
 
-    # Stands for: Install Unix Tests
+    # Stands for: Install Unix Test
 	$(requirementsUT)
 
 # Stands for: Run Windows
