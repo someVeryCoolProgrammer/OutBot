@@ -24,6 +24,7 @@
 - Use double quotes instead of single quotes
 - Use type hints as much possible
 - Documentation should be easy to follow and get to the point quickly
+- All .md files should be all upder-case with an underscore for multi-name files Eg: EXAMPLE_ONE.md  
 
 ---
 
