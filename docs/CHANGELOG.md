@@ -1,3 +1,7 @@
+# 10/11/'26
+
+- Fixed Makefile
+
 # 8/11/'26
 
 - Fixed syntax errors in yml file

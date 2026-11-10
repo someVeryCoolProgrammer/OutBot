@@ -22,7 +22,7 @@ jobs:
                   python-version: ${{ matrix.python-version }}
 
             - name: Install dependencies
-              run: installU
+              run: make installU
             - name: Run Ruff
               run: |
                   ruff check .

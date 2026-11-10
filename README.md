@@ -52,22 +52,22 @@ OutBot has built in features such as swear word filters.
 
 Windows:
 ```shell
-makeAW
+python -m venv .venv
 ```
 
 Activating It On Windows:
 ```shell
-makeW
+.\.venv\Scripts\activate.ps1
 ```
 
 Linux/macOS:
 ```shell
-makeAU
+python3 -m venv .venv
 ```
 
 Activating It On Linux/macOS:
 ```shell
-makeU
+source .venv/bin/activate
 ```
 
 ---
