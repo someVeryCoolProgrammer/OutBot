@@ -76,12 +76,12 @@ source .venv/bin/activate
 
 Installing Dependencies On Windows
 ```shell
-installW
+make installW
 ```
 
 Installing Dependencies On Linux/macOS:
 ```shell
-installU
+make installU
 ```
 
 ---
