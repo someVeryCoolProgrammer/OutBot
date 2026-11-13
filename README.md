@@ -16,17 +16,13 @@
 - [Developer ID And Env](#developer-id-and-env)
 - [Adding Your Bot To Your Apps/Servers](#adding-your-bot-to-your-appsservers)
 - [Run OutBot](#run-outbot)
-- [Developer notes](#developer-notes)
+- [Notes](#notes)
 
 ---
 
 # About
 
-OutBot is an open source, privacy respecting Discord utility bot built using **discord.py**. Most popular Discord bots are **NOT**. Open source is covered in more detail in docs/OPEN_SOURCE.md and [here](https://opensource.org/osd).
-
-OutBot uses **NO** privileged intents nor does OutBot use **ANY GATEWAY INTENTS**. Intents will be covered in more detail in docs/INTENTS.md
-
-OutBot has built in features such as swear word filters. 
+OutBot is a self-hosted, open source, privacy respecting Discord general utility bot built using **discord.py**. Most popular Discord bots are **NOT**. Open source is covered in more detail in docs/OPEN_SOURCE.md and [here](https://opensource.org/osd). OutBot uses **NO** privileged intents nor does OutBot use **ANY GATEWAY INTENTS**. Intents will be covered in more detail in docs/INTENTS.md
 
 [![OutBot's Version](https://img.shields.io/github/v/release/someVeryCoolProgrammer/OutBot)](https://github.com/someVeryCoolProgrammer/OutBot/releases/latest)
 
@@ -131,16 +127,16 @@ OutBot's Invite Link (User): https://discord.com/oauth2/authorize?client_id=YOUR
 
 Run OutBot On Windows:
 ```shell
-python -m bot
+make runW
 ```
 
 Run OutBot On Linux/macOS:
 ```shell
-python3 -m bot
+make runU 
 ```
 
 ---
 
-# Developer notes
+# Notes
 
-If you fork this repo, I would greatly appreciate it if you make it clear that your project is a fork of OutBot. Thank **you** for using OutBot!
+If you fork this repo, I would greatly appreciate it if you make it clear that your project is a fork of OutBot. 
