@@ -5,7 +5,7 @@ from unittest.mock import AsyncMock, Mock
 import discord
 import pytest
 
-from cogs import CommunicationCommands
+from commands import CommunicationCommands
 
 
 @pytest.mark.asyncio

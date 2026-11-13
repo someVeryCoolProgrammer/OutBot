@@ -5,7 +5,7 @@ from unittest.mock import AsyncMock, Mock
 import discord
 import pytest
 
-from cogs import LinksCommands
+from commands import LinksCommands
 from utils import (
     CODE_OF_CONDUCT,
     CONTRIBUTING_POLICY,
@@ -16,7 +16,6 @@ from utils import (
     SECURITY_POLICY,
     TERMS_OF_SERVICE,
 )
-
 
 @pytest.mark.asyncio
 async def test_links_commands_discord() -> None:

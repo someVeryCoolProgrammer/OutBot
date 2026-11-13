@@ -6,7 +6,7 @@ import discord
 import pytest
 
 from bot import OutBot
-from cogs import InformationCommands
+from commands import InformationCommands
 from utils import (
     BOT_VERSION,
     GITHUB_LINK,
@@ -54,8 +54,6 @@ async def test_information_commands_help() -> None:
 
     assert embed_message.title == "📋 OutBot's Command List: \n"
     assert embed_message.description == (
-        "\n# </> Code Commands: \n"
-        "- **`/code hello_world`**\n"
         "#\n 🗣️ Communication Commands: \n"
         "- **`/communication hello`**\n"
         "- **`/communication dm`**\n"

@@ -6,7 +6,7 @@ import discord
 import pytest
 
 from bot import OutBot
-from cogs import DeveloperCommands, developer_id_int
+from commands import DeveloperCommands, developer_id_int
 
 
 @pytest.mark.asyncio

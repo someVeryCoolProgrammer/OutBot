@@ -5,7 +5,7 @@ from unittest.mock import AsyncMock, Mock
 import discord
 import pytest
 
-from cogs import PrivacyCommands
+from commands import PrivacyCommands
 from utils import PRIVACY_POLICY
 
 

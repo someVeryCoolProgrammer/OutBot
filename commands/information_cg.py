@@ -69,8 +69,6 @@ class InformationCommands(app_commands.Group):
             embed=make_embed(
                 title="📋 OutBot's Command List: \n",
                 description=(
-                    "\n# </> Code Commands: \n"
-                    "- **`/code hello_world`**\n"
                     "#\n 🗣️ Communication Commands: \n"
                     "- **`/communication hello`**\n"
                     "- **`/communication dm`**\n"

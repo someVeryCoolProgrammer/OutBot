@@ -20,10 +20,10 @@ class OutBot(discord.Client):
 
         cog_path = Path("cogs")
 
-        for cog in cog_path.glob("*cog.py"):
+        for cog in cog_path.glob("*_cg.py"):
             module_name = cog.stem
 
-            module = importlib.import_module(f"cogs.{module_name}")
+            module = importlib.import_module(f"commands.{module_name}")
 
             if hasattr(module, "setup"):
                 self.tree.add_command(module.setup(self))

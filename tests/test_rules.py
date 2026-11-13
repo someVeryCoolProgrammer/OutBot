@@ -5,7 +5,7 @@ from unittest.mock import AsyncMock, Mock
 import discord
 import pytest
 
-from cogs import RulesCommands
+from commands import RulesCommands
 from utils import TERMS_OF_SERVICE
 
 
