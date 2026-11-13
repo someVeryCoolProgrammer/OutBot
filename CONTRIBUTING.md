@@ -4,8 +4,6 @@
 - [Pull Requests](#1-pull-requests)
 - [Developer Notes](#developer-notes)
 
----
-
 # OutBot's Coding Standards
 
 - Use 4 spaces
@@ -26,8 +24,6 @@
 - Documentation should be easy to follow and get to the point quickly
 - All .md files should be all upder-case with an underscore for multi-name files Eg: EXAMPLE_ONE.md  
 
----
-
 # Pull Requests
 
 1) Fork/clone the repository
@@ -41,8 +37,6 @@
     - Will this help users have a better experience with OutBot?  
     - Ai use  
     - How you would like to be credited  
-
-----
 
 # Developer Notes
 

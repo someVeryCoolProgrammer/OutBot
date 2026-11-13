@@ -1,13 +1,13 @@
 # Table Of Contents
 
-[Code Command Group](#code-command-group)
-[Developer Command Group](#developer-command-group)
-[Communication Command Group](#communication-command-group)
-[Information Command Group](#information-command-group)
-[Link Command Group](#link-command-group)
-[Moderation Command Group](#moderation-command-group)
-[Privacy Command Group](#privacy-command-group)
-[Rules Command Group](#rules-command-group)
+- [Code Command Group](#code-command-group)
+- [Developer Command Group](#developer-command-group)
+- [Communication Command Group](#communication-command-group)
+- [Information Command Group](#information-command-group)
+- [Link Command Group](#link-command-group)
+- [Moderation Command Group](#moderation-command-group)
+- [Privacy Command Group](#privacy-command-group)
+- [Rules Command Group](#rules-command-group)
 
 # Code Command Group
 OutBot codes something

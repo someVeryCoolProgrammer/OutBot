@@ -4,9 +4,7 @@
 - [OutBot's Terms Of Service](#outbots-terms-of-service)
     - [User Rules](#user-rules)
     - [Contributing Rules](#developer-rules) 
-- [Developer Notes](#Developer-notes)
-
----
+- [Notes](#notes)
 
 # Quick Links
 
@@ -19,15 +17,11 @@
 [OutBot's Contributing Policy](https://github.com/someVeryCoolProgrammer/OutBot?tab=contributing-ov-file)  
 [Discord Developer Policy](https://support-dev.discord.com/hc/en-us/articles/8563934450327-Discord-Developer-Policy)
 
----
-
 # OutBot's Terms Of Service
 
 By using OutBot, you agree to comply with Discord's TOS, and Discord's Community Guidelines. 
 
 By contributing to OutBot you agree to comply with OutBot's license, OutBot's Code Of Conduct, and OutBot's Contributing Policy.
-
----
 
 ## User Rules  
 1) Follow [Discord's TOS](https://discord.com/terms), and [Discord's Community Guidelines](https://discord.com/guidelines).  
@@ -40,8 +34,6 @@ By contributing to OutBot you agree to comply with OutBot's license, OutBot's Co
 3) Do **NOT** harass other contributors for **ANY** reason. More information is available at: [OutBot's Code Of Conduct](https://github.com/someVeryCoolProgrammer/OutBot?tab=coc-ov-file)
 4) Follow [Discord's Developer Policy](https://support-dev.discord.com/hc/en-us/articles/8563934450327-Discord-Developer-Policy)
 
----
-
-# Developer Notes
+# Notes
 
 Failure to comply with these rules will result in consequences.

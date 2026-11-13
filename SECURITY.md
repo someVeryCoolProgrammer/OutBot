@@ -3,8 +3,6 @@
 - [Reporting a Vulnerability](#reporting-a-vulnerability)
 - [Developer Notes](#developer-notes)
 
----
-
 # Reporting A Vulnerability
 
 If you discover a vulnerability, please report it privately.
@@ -21,8 +19,6 @@ Please include:
 - Steps to reproduce it
 - Impact
 - Any relevant screenshots or other relevant information
-
----
 
 # Developer Notes
 
