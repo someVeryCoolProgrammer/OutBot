@@ -27,8 +27,6 @@ To disable all non-privileged gateway intents
 intents = discord.Intents.none()  # Disables all default non-privileged gateway intents.
 ```
 
----
-
 # What Intents Does OutBot Use?
 
 | Name | Privileged | What Does It Do? | Enabled |
