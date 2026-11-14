@@ -15,10 +15,6 @@ DISCORD_SERVER_INVITE_LINK: Final[str] = (
 GITHUB_LINK: Final[str] = (
     "[OutBot's GitHub Link](<https://github.com/someVeryCoolProgrammer/OutBot/>)"
 )
-OUTBOT_INVITE_LINK: Final[str] = (
-    "[OutBot's Invite Link Guild (Server)](<https://discord.com/oauth2/authorize?client_id=1525595736706781384&scope=bot%20applications.commands>) or "
-    "[OutBot's Invite Link (User)](<https://discord.com/oauth2/authorize?client_id=1525595736706781384&scope=applications.commands>)"
-)
 OUTBOT_LICENSE: Final[str] = (
     "[OutBot's License](<https://github.com/someVeryCoolProgrammer/OutBot?tab=MIT-1-ov-file>)"
 )

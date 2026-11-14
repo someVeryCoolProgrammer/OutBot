@@ -5,7 +5,6 @@ from bot import OutBot
 from utils import (
     BOT_VERSION,
     GITHUB_LINK,
-    OUTBOT_INVITE_LINK,
     OUTBOT_LICENSE,
     PRIVACY_POLICY,
     TERMS_OF_SERVICE,
@@ -82,7 +81,6 @@ class InformationCommands(app_commands.Group):
                     "- **`/info roadmap`**\n"
                     "#\n 🔗 Link Commands: \n"
                     "- **`/link discord`**\n"
-                    "- **`/link invite`**\n"
                     "- **`/link github`**\n"
                     "- **`/link policy`**\n"
                     "#\n 🛡️ Mod Commands: \n"
@@ -120,7 +118,6 @@ class InformationCommands(app_commands.Group):
                 "Most discord bots do not. OutBot is a general purpose utility bot.\n"
                 f"- Outbot's Version: v{BOT_VERSION}\n"
                 f"OutBot's sourse code is available at: {GITHUB_LINK} under {OUTBOT_LICENSE}\n"
-                f"{OUTBOT_INVITE_LINK}\n"
                 f"{PRIVACY_POLICY}\n"
                 f"{TERMS_OF_SERVICE}\n"
             ),

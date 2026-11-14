@@ -11,7 +11,6 @@ from utils import (
     CONTRIBUTING_POLICY,
     DISCORD_SERVER_INVITE_LINK,
     GITHUB_LINK,
-    OUTBOT_INVITE_LINK,
     PRIVACY_POLICY,
     SECURITY_POLICY,
     TERMS_OF_SERVICE,
@@ -33,23 +32,9 @@ async def test_links_commands_discord() -> None:
         DISCORD_SERVER_INVITE_LINK
     )
 
-
-@pytest.mark.asyncio
-async def test_links_commands_invite() -> None:
-    """Tests /link discord"""
-    interaction = Mock()
-    interaction.response.send_message = AsyncMock()
-
-    links_commands = LinksCommands()
-
-    await links_commands.invite.callback(links_commands, interaction)
-
-    interaction.response.send_message.assert_awaited_once_with(OUTBOT_INVITE_LINK)
-
-
 @pytest.mark.asyncio
 async def test_links_commands_github() -> None:
-    """Tests /link discord"""
+    """Tests /link github"""
     interaction = Mock()
     interaction.response.send_message = AsyncMock()
 
@@ -62,7 +47,7 @@ async def test_links_commands_github() -> None:
 
 @pytest.mark.asyncio
 async def test_information_commands_help() -> None:
-    """Tests /info help"""
+    """Tests /links policy"""
     links_commands = LinksCommands()
     interaction = Mock()
     interaction.response.send_message = AsyncMock()

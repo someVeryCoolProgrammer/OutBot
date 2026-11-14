@@ -1,9 +1,3 @@
-<div align="center">
-    <h1>OutBot</h1>
-    <h3>Private. Secure. Reliable.</h3>
-    <br>
-</div>
-
 # Table Of Contents
 
 - [About](#about)
@@ -12,7 +6,6 @@
 - [Getting A Local Copy Of OutBot](#getting-a-local-copy-of-outbot)
 - [Virtual Environment](#virtual-environment)
 - [Installing Dependencies](#installing-dependencies)
-- [Discord Developer Portal Setup](#discord-developer-portal-setup)
 - [Developer ID And Env](#developer-id-and-env)
 - [Adding Your Bot To Your Apps/Servers](#adding-your-bot-to-your-appsservers)
 - [Run OutBot](#run-outbot)
@@ -26,15 +19,15 @@ OutBot is a self-hosted, open source, privacy respecting Discord general utility
 
 # Quick Links
 
-[OutBot's TOS](https://github.com/someVeryCoolProgrammer/OutBot/blob/main/TERMS.md) | [OutBot's Privacy Policy](https://github.com/someVeryCoolProgrammer/OutBot/blob/main/PRIVACY.md) | [OutBot's Security Policy](https://github.com/someVeryCoolProgrammer/OutBot?tab=security-ov-file) | [OutBot's License](https://github.com/someVeryCoolProgrammer/OutBot/?tab=MIT-1-ov-file) | [OutBot's Invite Link Guild (Server)](https://discord.com/oauth2/authorize?client_id=1525595736706781384&scope=bot%20applications.commands) | [OutBot's Invite Link (User)](https://discord.com/oauth2/authorize?client_id=1525595736706781384&scope=applications.commands)
+[OutBot's TOS](https://github.com/someVeryCoolProgrammer/OutBot/blob/main/TERMS.md) | [OutBot's Privacy Policy](https://github.com/someVeryCoolProgrammer/OutBot/blob/main/PRIVACY.md) | [OutBot's Security Policy](https://github.com/someVeryCoolProgrammer/OutBot?tab=security-ov-file) | [OutBot's License](https://github.com/someVeryCoolProgrammer/OutBot/?tab=MIT-1-ov-file) 
 
 # Requirements
 
-- [Python's >= 3.10](https://www.python.org/downloads/)
-- discord.py (>= 2.71) You can check discord.py latest version [here](https://pypi.org/project/discord.py/)
+- [Python >= 3.10](https://www.python.org/downloads/)
 - [git](https://git-scm.com/install/)
 - [make (Only if you're on windows)](https://gnuwin32.sourceforge.net/packages/make.htm)
 - Text editor of your choice (eg: vscode, vscodium, nvim, etc)
+- Discord account and application
 
 # Getting A Local Copy Of OutBot
 
@@ -48,41 +41,33 @@ cd outbot
 
 # Virtual Environment
 
-Windows:
 ```shell
+# Windows:
 python -m venv .venv
-```
 
-Activating It On Windows:
-```shell
-.\.venv\Scripts\activate.ps1
-```
-
-Linux/macOS:
-```shell
+# Unix:
 python3 -m venv .venv
 ```
 
-Activating It On Linux/macOS:
+Activating It:
 ```shell
+# Windows:
+.\.venv\Scripts\activate.ps1
+
+# Unix:
 source .venv/bin/activate
 ```
 
 # Installing Dependencies:
 
-Installing Dependencies On Windows
+Installing Dependencies:
 ```shell
+# Windows:
 make installW
-```
 
-Installing Dependencies On Linux/macOS:
-```shell
+Unix:
 make installU
 ```
-
-# Discord Developer Portal Setup
-
-Head over to [Discord Developer portal](https://discord.com/developers/applications) and sign in/create an account. Click "new application". Name your bot and accept Discord's Developer TOS/Privacy Policy. 
 
 # Developer Id And Env
 
@@ -101,20 +86,13 @@ OutBot's Invite Link Guild (Server): https://discord.com/oauth2/authorize?client
 OutBot's Invite Link (User): https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&scope=applications.commands
 ```
 
-(You get your bot's discord id the same way you got your own discord id.)
-
 # Run OutBot
 
 Run OutBot On Windows:
 ```shell
+# Windows:
 make runW
+
+# Unix
+make runU
 ```
-
-Run OutBot On Linux/macOS:
-```shell
-make runU 
-```
-
-# Notes
-
-If you fork this repo, I would greatly appreciate it if you make it clear that your project is a fork of OutBot. 
