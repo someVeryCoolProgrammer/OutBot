@@ -25,7 +25,7 @@ async def test_communication_commands_greet() -> None:
 async def test_communication_commands_dm(monkeypatch) -> None:
     """Tests /communication dm"""
     monkeypatch.setattr(
-        "cogs.communication_cog.send_censor_word_warning",
+        "commands.communication_cg.send_censor_word_warning",
         AsyncMock(return_value=False),
     )
 
@@ -55,7 +55,7 @@ async def test_communication_commands_dm(monkeypatch) -> None:
 async def test_communication_commands_dm_forbidden(monkeypatch) -> None:
     """Tests /communication dm when DMs are disabled"""
     monkeypatch.setattr(
-        "cogs.communication_cog.send_censor_word_warning",
+        "commands.communication_cg.send_censor_word_warning",
         AsyncMock(return_value=False),
     )
 
@@ -86,7 +86,7 @@ async def test_communication_commands_dm_forbidden(monkeypatch) -> None:
 async def test_communication_commands_dm_censored(monkeypatch) -> None:
     """Tests /communication dm with a censored message"""
     monkeypatch.setattr(
-        "cogs.communication_cog.send_censor_word_warning",
+        "commands.communication_cg.send_censor_word_warning",
         AsyncMock(return_value=True),
     )
 
@@ -110,7 +110,7 @@ async def test_communication_commands_dm_censored(monkeypatch) -> None:
 async def test_communication_commands_echo(monkeypatch) -> None:
     """Tests /communication echo"""
     monkeypatch.setattr(
-        "cogs.communication_cog.send_censor_word_warning",
+        "commands.communication_cg.send_censor_word_warning",
         AsyncMock(return_value=False),
     )
 
@@ -135,7 +135,7 @@ async def test_communication_commands_echo(monkeypatch) -> None:
 async def test_communication_commands_echo_censored(monkeypatch) -> None:
     """Tests /communication echo with a censored message"""
     monkeypatch.setattr(
-        "cogs.communication_cog.send_censor_word_warning",
+        "commands.communication_cg.send_censor_word_warning",
         AsyncMock(return_value=True),
     )
 

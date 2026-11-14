@@ -18,10 +18,10 @@ class OutBot(discord.Client):
     async def setup_hook(self) -> None:
         """Loads all cogs and syncs all commands to the command tree"""
 
-        cog_path = Path("cogs")
+        commands_path = Path("commands")
 
-        for cog in cog_path.glob("*_cg.py"):
-            module_name = cog.stem
+        for command in commands_path.glob("*_cg.py"):
+            module_name = command.stem
 
             module = importlib.import_module(f"commands.{module_name}")
 

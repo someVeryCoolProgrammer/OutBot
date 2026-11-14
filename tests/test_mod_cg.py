@@ -5,14 +5,14 @@ from unittest.mock import AsyncMock, Mock
 import discord
 import pytest
 
-from cogs import ModerationCommands
+from commands import ModerationCommands
 
 
 @pytest.mark.asyncio
 async def test_moderation_commands_ban(monkeypatch: pytest.MonkeyPatch) -> None:
     """Tests the command /mod ban."""
     monkeypatch.setattr(
-        "cogs.mod_cog.send_censor_word_warning",
+        "commands.mod_cg.send_censor_word_warning",
         AsyncMock(return_value=False),
     )
 
@@ -46,7 +46,7 @@ async def test_moderation_commands_ban_censored(
 ) -> None:
     """Tests /mod ban with a censored reason."""
     monkeypatch.setattr(
-        "cogs.mod_cog.send_censor_word_warning",
+        "commands.mod_cg.send_censor_word_warning",
         AsyncMock(return_value=True),
     )
 
@@ -72,7 +72,7 @@ async def test_moderation_commands_ban_in_dm(
 ) -> None:
     """Tests /mod ban when used in DMs."""
     monkeypatch.setattr(
-        "cogs.mod_cog.send_censor_word_warning",
+        "commands.mod_cg.send_censor_word_warning",
         AsyncMock(return_value=False),
     )
 
@@ -96,7 +96,7 @@ async def test_moderation_commands_kick(
 ) -> None:
     """Tests the command /mod kick."""
     monkeypatch.setattr(
-        "cogs.mod_cog.send_censor_word_warning",
+        "commands.mod_cg.send_censor_word_warning",
         AsyncMock(return_value=False),
     )
 
@@ -130,7 +130,7 @@ async def test_moderation_commands_kick_censored(
 ) -> None:
     """Tests /mod kick with a censored reason."""
     monkeypatch.setattr(
-        "cogs.mod_cog.send_censor_word_warning",
+        "commands.mod_cg.send_censor_word_warning",
         AsyncMock(return_value=True),
     )
 
@@ -156,7 +156,7 @@ async def test_moderation_commands_kick_in_dm(
 ) -> None:
     """Tests /mod kick when used in DMs."""
     monkeypatch.setattr(
-        "cogs.mod_cog.send_censor_word_warning",
+        "commands.mod_cg.send_censor_word_warning",
         AsyncMock(return_value=False),
     )
 
@@ -178,7 +178,7 @@ async def test_moderation_commands_kick_in_dm(
 async def test_moderation_commands_unban(monkeypatch: pytest.MonkeyPatch) -> None:
     """Tests the command /mod unban."""
     monkeypatch.setattr(
-        "cogs.mod_cog.send_censor_word_warning",
+        "commands.mod_cg.send_censor_word_warning",
         AsyncMock(return_value=False),
     )
 
@@ -211,7 +211,7 @@ async def test_moderation_commands_unban_censored(
 ) -> None:
     """Tests /mod unban with a censored reason."""
     monkeypatch.setattr(
-        "cogs.mod_cog.send_censor_word_warning",
+        "commands.mod_cg.send_censor_word_warning",
         AsyncMock(return_value=True),
     )
 
@@ -236,7 +236,7 @@ async def test_moderation_commands_unban_in_dm(
 ) -> None:
     """Tests /mod unban when used in DMs."""
     monkeypatch.setattr(
-        "cogs.mod_cog.send_censor_word_warning",
+        "commands.mod_cg.send_censor_word_warning",
         AsyncMock(return_value=False),
     )
 
@@ -260,7 +260,7 @@ async def test_moderation_commands_unban_not_found(
 ) -> None:
     """Tests /mod unban when the user cannot be found."""
     monkeypatch.setattr(
-        "cogs.mod_cog.send_censor_word_warning",
+        "commands.mod_cg.send_censor_word_warning",
         AsyncMock(return_value=False),
     )
 

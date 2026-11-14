@@ -17,6 +17,7 @@ from utils import (
     TERMS_OF_SERVICE,
 )
 
+
 @pytest.mark.asyncio
 async def test_links_commands_discord() -> None:
     """Tests /link discord"""
