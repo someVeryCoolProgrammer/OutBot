@@ -1,0 +1,1 @@
+This directory contains all of OutBot's commands. "cg" stands for: "command group". It was changed from "cog" because OutBot doesn't really use cogs anymore because it switched from discord.Bot to discord.Client.  
