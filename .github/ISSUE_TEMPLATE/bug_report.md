@@ -22,8 +22,8 @@ If applicable, add screenshots to help explain your problem.
 **Version And OS**
 The operating system and OutBot's version you encoutered the bug on. 
 
-- OS: [e.g: Linux]
-- OutBot Version [e.g. 0.5.12]
+- OS
+- OutBot Version
 
 **Additional context**
 Add any other context about the problem here.
