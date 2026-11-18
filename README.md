@@ -97,4 +97,4 @@ make runW
 make runU
 ```
 
-OutBot is no longer going to recieve any more updates because it is done.
+OutBot is no longer going to receive ny more updates because it is done.
