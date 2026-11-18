@@ -22,6 +22,8 @@ PIW = python
 # Stands for: Python Interpreter Unix
 PIU = python3
 
+.PHONY: installW, installU, runW, runU
+
 # Stands for: Install Windows
 installW:
     # Stands for: Requirements Windows Core 

@@ -96,3 +96,5 @@ make runW
 # Unix
 make runU
 ```
+
+OutBot is no longer going to recieve any more updates because it is done.
