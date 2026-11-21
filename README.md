@@ -13,13 +13,13 @@
 
 # About
 
-OutBot is a self-hosted, open source, privacy respecting Discord general utility bot built using **discord.py**. Most popular Discord bots are **NOT**. Open source is covered in more detail in docs/OPEN_SOURCE.md and [here](https://opensource.org/osd). OutBot uses **NO** privileged intents nor does OutBot use **ANY GATEWAY INTENTS**. Intents will be covered in more detail in docs/INTENTS.md
+OutBot is a self-hosted, open source, privacy respecting Discord general utility bot built using **discord.py**. OutBot aims to reduce the amount of discord bots in your server to just 1.  
 
 [![OutBot's Version](https://img.shields.io/github/v/release/someVeryCoolProgrammer/OutBot)](https://github.com/someVeryCoolProgrammer/OutBot/releases/latest)
 
 # Quick Links
 
-[OutBot's TOS](https://github.com/someVeryCoolProgrammer/OutBot/blob/main/TERMS.md) | [OutBot's Privacy Policy](https://github.com/someVeryCoolProgrammer/OutBot/blob/main/PRIVACY.md) | [OutBot's Security Policy](https://github.com/someVeryCoolProgrammer/OutBot?tab=security-ov-file) | [OutBot's License](https://github.com/someVeryCoolProgrammer/OutBot/?tab=MIT-1-ov-file) 
+[OutBot's TOS](https://github.com/someVeryCoolProgrammer/OutBot/blob/main/docs/TERMS_OF_SERVICE.md) | [OutBot's Privacy Policy](https://github.com/someVeryCoolProgrammer/OutBot/blob/main/docs/PRIVACY_POLICY.md) | [OutBot's Security Policy](https://github.com/someVeryCoolProgrammer/OutBot/blob/main/SECURITY.md) | [OutBot's License](https://github.com/someVeryCoolProgrammer/OutBot/blob/main/LICENSE) 
 
 # Requirements
 
@@ -96,5 +96,3 @@ make runW
 # Unix
 make runU
 ```
-
-OutBot is no longer going to receive ny more updates because it is done.

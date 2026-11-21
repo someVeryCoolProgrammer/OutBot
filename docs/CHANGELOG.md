@@ -1,3 +1,7 @@
+# 21/11/'26
+
+- Fixed documentation errors
+
 # 10/11/'26
 
 - Fixed Makefile

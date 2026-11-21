@@ -1,6 +1,5 @@
 from typing import Final
 
-BOT_VERSION: Final[str] = "1.0.0"
 DATE_CREATED: Final[str] = "July 11th 2026"
 
 CODE_OF_CONDUCT: Final[str] = (
@@ -8,9 +7,6 @@ CODE_OF_CONDUCT: Final[str] = (
 )
 CONTRIBUTING_POLICY: Final[str] = (
     "[OutBot's Contributing Policy](<https://github.com/someVeryCoolProgrammer/OutBot?tab=contributing-ov-file>)"
-)
-DISCORD_SERVER_INVITE_LINK: Final[str] = (
-    "[OutBot's Discord Server](<https://discord.gg/>zg44xwwgm3)"
 )
 GITHUB_LINK: Final[str] = (
     "[OutBot's GitHub Link](<https://github.com/someVeryCoolProgrammer/OutBot/>)"

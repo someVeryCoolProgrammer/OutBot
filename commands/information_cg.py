@@ -3,7 +3,6 @@ from discord import app_commands
 
 from bot import OutBot
 from utils import (
-    BOT_VERSION,
     GITHUB_LINK,
     OUTBOT_LICENSE,
     PRIVACY_POLICY,
@@ -80,7 +79,6 @@ class InformationCommands(app_commands.Group):
                     "- **`/info about`**\n"
                     "- **`/info roadmap`**\n"
                     "#\n 🔗 Link Commands: \n"
-                    "- **`/link discord`**\n"
                     "- **`/link github`**\n"
                     "- **`/link policy`**\n"
                     "#\n 🛡️ Mod Commands: \n"
@@ -116,7 +114,6 @@ class InformationCommands(app_commands.Group):
             description=(
                 "Outbot is a general utility bot that takes user privacy and security seriously.\n"
                 "Most discord bots do not. OutBot is a general purpose utility bot.\n"
-                f"- Outbot's Version: v{BOT_VERSION}\n"
                 f"OutBot's sourse code is available at: {GITHUB_LINK} under {OUTBOT_LICENSE}\n"
                 f"{PRIVACY_POLICY}\n"
                 f"{TERMS_OF_SERVICE}\n"
@@ -151,7 +148,7 @@ class InformationCommands(app_commands.Group):
                 "- ||❌️|| Host Outbot's privacy policy and terms of service on a website.\n"
                 "\n# Code quality: \n"
                 "- ||🛠️|| Less repeated code.\n"
-                "- ||❌️|| More automation"
+                "- ||🛠️|| More automation"
             ),
             colour=discord.Colour.green(),
         )

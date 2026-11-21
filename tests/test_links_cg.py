@@ -9,28 +9,12 @@ from commands import LinksCommands
 from utils import (
     CODE_OF_CONDUCT,
     CONTRIBUTING_POLICY,
-    DISCORD_SERVER_INVITE_LINK,
     GITHUB_LINK,
     PRIVACY_POLICY,
     SECURITY_POLICY,
     TERMS_OF_SERVICE,
 )
 
-
-@pytest.mark.asyncio
-async def test_links_commands_discord() -> None:
-    """Tests /link discord"""
-    interaction = Mock()
-    interaction.response.send_message = AsyncMock()
-
-    links_commands = LinksCommands()
-
-    await links_commands.outmyth_discord_server_invite_link.callback(
-        links_commands, interaction
-    )
-    interaction.response.send_message.assert_awaited_once_with(
-        DISCORD_SERVER_INVITE_LINK
-    )
 
 @pytest.mark.asyncio
 async def test_links_commands_github() -> None:

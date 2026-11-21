@@ -5,7 +5,6 @@ from bot import OutBot
 from utils import (
     CODE_OF_CONDUCT,
     CONTRIBUTING_POLICY,
-    DISCORD_SERVER_INVITE_LINK,
     GITHUB_LINK,
     PRIVACY_POLICY,
     SECURITY_POLICY,
@@ -19,25 +18,6 @@ class LinksCommands(app_commands.Group):
 
     def __init__(self) -> None:
         super().__init__(name="link")
-
-    @app_commands.command(
-        name="discord",
-        description="OutMyth's Discord server invite link.",
-    )
-    @app_commands.checks.cooldown(1, 30, key=lambda interaction: interaction.user.id)
-    async def outmyth_discord_server_invite_link(
-        self,
-        interaction: discord.Interaction,
-    ) -> None:
-        """
-        OutMyth's Discord server invite link.
-
-        Args:
-            interaction (discord.Interaction): The Discord command being invoked.
-        Cooldown:
-            1 message per user every 30 seconds. This only applies the command they just used.
-        """
-        await interaction.response.send_message(DISCORD_SERVER_INVITE_LINK)
 
     @app_commands.command(name="github", description="OutBot's GitHub")
     @app_commands.checks.cooldown(1, 30, key=lambda interaction: interaction.user.id)

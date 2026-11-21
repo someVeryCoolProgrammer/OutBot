@@ -8,7 +8,6 @@ import pytest
 from bot import OutBot
 from commands import InformationCommands
 from utils import (
-    BOT_VERSION,
     GITHUB_LINK,
     OUTBOT_LICENSE,
     PRIVACY_POLICY,
@@ -65,7 +64,6 @@ async def test_information_commands_help() -> None:
         "- **`/info about`**\n"
         "- **`/info roadmap`**\n"
         "#\n 🔗 Link Commands: \n"
-        "- **`/link discord`**\n"
         "- **`/link github`**\n"
         "- **`/link policy`**\n"
         "#\n 🛡️ Mod Commands: \n"
@@ -99,7 +97,6 @@ async def test_information_commands_about() -> None:
     assert embed_message.description == (
         "Outbot is a general utility bot that takes user privacy and security seriously.\n"
         "Most discord bots do not. OutBot is a general purpose utility bot.\n"
-        f"- Outbot's Version: v{BOT_VERSION}\n"
         f"OutBot's sourse code is available at: {GITHUB_LINK} under {OUTBOT_LICENSE}\n"
         f"{PRIVACY_POLICY}\n"
         f"{TERMS_OF_SERVICE}\n"
@@ -130,7 +127,7 @@ async def test_information_commands_roadmap() -> None:
         "- ||❌️|| Host Outbot's privacy policy and terms of service on a website.\n"
         "\n# Code quality: \n"
         "- ||🛠️|| Less repeated code.\n"
-        "- ||❌️|| More automation"
+        "- ||🛠️|| More automation"
     )
     assert embed_message.colour == discord.Colour.green()
     assert len(embed_message.fields) == 1
